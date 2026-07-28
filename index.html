@@ -2,7 +2,7 @@
 <html lang="en">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://paulbrillinger.com/">
-<meta name="description" content="Stuck companies rarely need more effort. They need a better angle. Strategy, new ventures, and product for mission-driven founders and teams.">
+<meta name="description" content="Stuck companies rarely need more effort. They need a better angle. Strategy, new ventures, and product — global macro at Wellington and Point72, then founder and CEO of OuiSi.">
 <meta name="author" content="Paul Brillinger">
 <meta name="theme-color" content="#F7F5F1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#17181C" media="(prefers-color-scheme: dark)">
@@ -26,8 +26,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Paul Brillinger">
 <meta name="twitter:image" content="https://paulbrillinger.com/og-image.png">
-<meta property="og:description" content="Stuck companies rarely need more effort. They need a better angle. Strategy, new ventures, and product for mission-driven founders and teams.">
-<meta name="twitter:description" content="Stuck companies rarely need more effort. They need a better angle. Strategy, new ventures, and product for mission-driven founders and teams.">
+<meta property="og:description" content="Stuck companies rarely need more effort. They need a better angle. Strategy, new ventures, and product — global macro at Wellington and Point72, then founder and CEO of OuiSi.">
+<meta name="twitter:description" content="Stuck companies rarely need more effort. They need a better angle. Strategy, new ventures, and product — global macro at Wellington and Point72, then founder and CEO of OuiSi.">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paul Brillinger</title>
@@ -149,7 +149,7 @@ h1 {
 .thesis em { color: var(--copper); }
 .thesis-sec { padding: 64px 0 60px; }
 .sec-rule { border-top: 2px solid var(--rule); }
-.sec-head { display: flex; align-items: baseline; gap: 26px; margin-bottom: 52px; }
+.sec-head { display: flex; align-items: baseline; gap: 26px; margin-bottom: 34px; }
 .sec-head .caps { flex-shrink: 0; }
 .sec-title { font-size: clamp(28px, 3.4vw, 40px); font-style: italic; font-weight: 400; }
 
@@ -165,7 +165,9 @@ h1 {
   padding: 34px 0;
   border-top: 1px solid var(--hair);
 }
-.entry:first-of-type { border-top: none; padding-top: 0; }
+/* :first-of-type would match .sec-head (also a div), never the entry —
+   target the entry that actually follows the heading */
+.sec-head + .entry { border-top: none; padding-top: 0; }
 .year {
   font-style: italic; font-size: 27px; color: var(--copper);
   line-height: 1.15; letter-spacing: -0.01em;
@@ -183,16 +185,15 @@ h1 {
   padding: 24px 0;
   border-top: 1px solid var(--hair);
 }
-.use:first-child { border-top: 2px solid var(--rule); }
+.use:first-child { border-top: none; padding-top: 0; }
 .use h3 { font-size: 20px; font-weight: 600; margin-bottom: 6px; line-height: 1.32; }
 .use p { font-size: 16.5px; color: var(--ink2); line-height: 1.66; }
-/* closing note for the section — bracketed by a rule so it reads as a
-   conclusion rather than another orphaned paragraph */
+/* closing note — set apart by space and voice (italic, full ink), not by
+   another rule; 2px is reserved for section boundaries alone */
 .approach-body {
   font-size: 18px; font-style: italic;
   color: var(--ink); max-width: 620px; line-height: 1.68;
-  border-top: 2px solid var(--rule);
-  padding-top: 26px;
+  margin-top: 52px;
 }
 
 /* contact */
@@ -247,7 +248,7 @@ footer {
   .hero { padding-top: 128px; padding-bottom: 44px; }
   .offer-grid { grid-template-columns: 1fr; gap: 26px; }
   .entry { grid-template-columns: 1fr; gap: 8px; }
-  .sec-head { flex-direction: column; gap: 8px; margin-bottom: 38px; }
+  .sec-head { flex-direction: column; gap: 8px; margin-bottom: 26px; }
 }
 
 /* ── phones: tighten the type scale; 18px Baskerville is far too large
@@ -264,7 +265,8 @@ footer {
 
   .journey { padding-top: 22px; padding-bottom: 40px; }
 
-  .sec { padding-top: 52px; padding-bottom: 52px; }
+  .sec { padding-top: 46px; padding-bottom: 46px; }
+  .sec-head { margin-bottom: 22px; }
   .sec-title { font-size: 25px; line-height: 1.25; }
 
   .offer h3 { font-size: 18px; }
@@ -305,7 +307,7 @@ footer {
   .jera-lbl { display: none; }
 
   .contact { padding-top: 62px; padding-bottom: 72px; }
-  .approach-body { font-size: 16.5px; padding-top: 22px; }
+  .approach-body { font-size: 16.5px; margin-top: 38px; }
 
   .nav-name { font-size: 16px; }
   .nav-right { gap: 14px; }
@@ -332,7 +334,7 @@ footer {
 <div class="hero wrap">
   <p class="caps hero-kicker">Brooklyn &amp; the Hudson Valley — Strategy · New ventures · Product</p>
   <h1>Stuck companies rarely need more effort. They need a better <span class="squig">angle<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2,6 Q22,2 44,6 T98,5"/></svg></span>.</h1>
-  <p class="hero-sub">That's been my work twice over — global macro at Wellington and Point72, then a company I built from a thesis about human connection. Now I do it with mission-driven founders and teams.</p>
+  <p class="hero-sub">That's been my work twice over — global macro at Wellington and Point72, then a company I built from a thesis about human connection. Now I'd like to do it inside someone else's.</p>
 </div>
 
 <div class="journey wrap">
@@ -393,7 +395,7 @@ footer {
     <div>
       <h3>Founder &amp; CEO</h3>
       <p class="co">OuiSi Inc., Brooklyn</p>
-      <p class="body">The same instinct, aimed at a cultural problem — that disconnection was becoming the defining problem of our time. Built it into a physical-digital product platform. Invented and crafted the products. Built partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. OuiSi lives in homes, classrooms, and memory care centers across the country. The company continues today — restructured and leaner by design, running alongside my work with founders.</p>
+      <p class="body">The same instinct, aimed at a cultural problem — that disconnection was becoming the defining problem of our time. Built it into a physical-digital product platform. Invented and crafted the products. Built partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. OuiSi lives in homes, classrooms, and memory care centers across the country. The company continues today — restructured and leaner by design, and no longer a full-time job.</p>
       <div class="figures">
         <div><div class="fig-v">$15M</div><div class="fig-l">Revenue</div></div>
         <div><div class="fig-v">500K</div><div class="fig-l">Units</div></div>
@@ -475,12 +477,12 @@ footer {
       <p>Sometimes what helps most is a clear head across the table with no stake in being right.</p>
     </div>
   </div>
-  <p class="approach-body">Find the angle, then help build toward it. I take this on as a fractional partner, a consultant, or — for the right mission — full-time.</p>
+  <p class="approach-body">Find the angle, then help build toward it. I'm looking for the right company to do that in full-time, and take on a few fractional engagements alongside.</p>
 </div>
 
 <div class="contact sec-rule wrap">
   <h2>Deep inside a problem? I'd like to hear about it.</h2>
-  <p>Fractional, consulting, or full-time for the right fit. Send a short note — what you're building, and where it's stuck.</p>
+  <p>Full-time for the right mission, or fractional alongside. Send a short note — what you're building, and where it's stuck.</p>
   <a class="write" href="mailto:paul@ouisi.co">Write to me</a>
   <div class="clinks">
     <a class="clink" href="https://www.linkedin.com/in/paul-brillinger" target="_blank" rel="noopener">LinkedIn</a>
@@ -529,7 +531,7 @@ Brooklyn & the Hudson Valley · paul@ouisi.co · linkedin.com/in/paul-brillinger
 
 *Thirteen years pricing risk in global markets. Eleven years building a company about human connection. Turns out they overlap — both reward seeing what everyone else is looking at, differently.*
 
-I work with mission-driven founders and teams — as a fractional partner, a consultant, or full-time for the right mission.
+Looking for the right company to build in full-time, and taking on a few fractional engagements alongside.
 
 ## What I bring
 - **Understand the why** — a venture runs on more than a plan; it runs on what drives the team, and the "why" is often where the angle hides.
@@ -544,7 +546,7 @@ I work with mission-driven founders and teams — as a fractional partner, a con
 ## Experience
 
 ### Founder & CEO — OuiSi Inc. (2015–now, Brooklyn)
-The same instinct, aimed at a cultural problem — that disconnection was becoming the defining problem of our time. Built it into a physical-digital product platform. Invented and crafted the products. Partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. $15M revenue, 500K units, 250K homes; used in classrooms and memory care centers. The company continues today — restructured and leaner by design, running alongside my client work.
+The same instinct, aimed at a cultural problem — that disconnection was becoming the defining problem of our time. Built it into a physical-digital product platform. Invented and crafted the products. Partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. $15M revenue, 500K units, 250K homes; used in classrooms and memory care centers. The company continues today — restructured and leaner by design, and no longer a full-time job.
 
 ### Participant, Inaugural Cohort — THNK School of Creative Leadership (2015, Vancouver)
 Program for creative leaders working on solutions to societal challenges — the bridge between markets and founding OuiSi.
