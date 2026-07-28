@@ -123,7 +123,7 @@ h1 {
 .hero-sub { font-size: 20px; color: var(--ink2); max-width: 580px; line-height: 1.7; }
 
 /* journey */
-.journey { padding-top: 40px; padding-bottom: 12px; }
+.journey { padding-top: 40px; padding-bottom: 56px; }
 .journey svg { width: 100%; height: auto; display: block; }
 .rib { opacity: 0.85; transition: opacity .2s; }
 .journey svg:hover .rib { opacity: 0.3; }
@@ -137,19 +137,6 @@ h1 {
   font-style: italic; font-size: 16px; color: var(--ink2);
   margin-top: 18px;
 }
-
-/* chapters — footnote row */
-.chapters {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px;
-  padding: 30px 0 90px;
-}
-.chap { border-top: 2px solid var(--rule); padding-top: 16px; }
-.chap-no {
-  font-style: italic; font-size: 26px; color: var(--copper);
-  line-height: 1; margin-bottom: 10px;
-}
-.chap h4 { font-size: 17px; font-weight: 600; font-style: normal; margin-bottom: 6px; }
-.chap p { font-size: 15.5px; color: var(--ink2); line-height: 1.62; }
 
 /* sections */
 .sec { padding-top: 78px; padding-bottom: 78px; }
@@ -256,7 +243,7 @@ footer {
   .wrap { padding-left: 26px; padding-right: 26px; }
   .nav-in { padding: 0 20px; }
   .hero { padding-top: 128px; padding-bottom: 44px; }
-  .chapters, .offer-grid { grid-template-columns: 1fr; gap: 26px; }
+  .offer-grid { grid-template-columns: 1fr; gap: 26px; }
   .entry { grid-template-columns: 1fr; gap: 8px; }
   .sec-head { flex-direction: column; gap: 8px; margin-bottom: 38px; }
 }
@@ -273,11 +260,7 @@ footer {
   .caps { font-size: 10px; }
   .hero-sub { font-size: 16.5px; line-height: 1.62; }
 
-  .journey { padding-top: 22px; }
-  .chapters { padding-top: 22px; padding-bottom: 52px; gap: 22px; }
-  .chap h4 { font-size: 16px; }
-  .chap p { font-size: 15px; line-height: 1.58; }
-  .chap-no { font-size: 22px; margin-bottom: 8px; }
+  .journey { padding-top: 22px; padding-bottom: 40px; }
 
   .sec { padding-top: 52px; padding-bottom: 52px; }
   .sec-title { font-size: 25px; line-height: 1.25; }
@@ -303,7 +286,9 @@ footer {
   .contact { padding-top: 62px; padding-bottom: 72px; }
   .contact h2 { font-size: 27px; line-height: 1.2; }
   .contact p { font-size: 15.5px; margin-bottom: 30px; }
-  .write { font-size: 11px; padding: 15px 32px; letter-spacing: 0.16em; }
+  /* full-width CTA on phones — a left-aligned pill leaves the row
+     looking stranded, and a wide tap target is better anyway */
+  .write { display: block; text-align: center; font-size: 11.5px; padding: 17px 24px; letter-spacing: 0.16em; }
   .clinks { gap: 24px; margin-top: 26px; }
   .clink { font-size: 15.5px; }
 
@@ -369,24 +354,6 @@ footer {
   </svg>
 </div>
 
-<div class="chapters wrap">
-  <div class="chap">
-    <span class="chap-no">i.</span>
-    <h4>Markets, 2001–2014</h4>
-    <p>Global macro at Wellington and Point72 — patterns, probabilities, conviction under uncertainty. The creative work was in the data: reading it in novel ways, pulling in approaches that looked unrelated until they weren't.</p>
-  </div>
-  <div class="chap">
-    <span class="chap-no">ii.</span>
-    <h4>OuiSi, since 2015</h4>
-    <p>The same instinct, pointed at a cultural problem. A company built from a thesis about human connection — inventing the products, building the partnerships, wearing every hat a founder wears.</p>
-  </div>
-  <div class="chap">
-    <span class="chap-no">iii.</span>
-    <h4>Now</h4>
-    <p>Work that needs all of it: strategy with rigor, building with imagination, and a real read on the people underneath.</p>
-  </div>
-</div>
-
 <div class="sec sec-rule wrap">
   <div class="sec-head">
     <h2 class="sec-title">What I bring.</h2>
@@ -420,7 +387,7 @@ footer {
     <div>
       <h3>Founder &amp; CEO</h3>
       <p class="co">OuiSi Inc., Brooklyn</p>
-      <p class="body">Built a company from a thesis — that disconnection was becoming the defining cultural problem of our time — into a physical-digital product platform. Invented and crafted the products. Built partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. OuiSi lives in homes, classrooms, and memory care centers across the country. The company continues today — restructured and leaner by design, running alongside my work with founders.</p>
+      <p class="body">The same instinct, aimed at a cultural problem — that disconnection was becoming the defining problem of our time. Built it into a physical-digital product platform. Invented and crafted the products. Built partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. OuiSi lives in homes, classrooms, and memory care centers across the country. The company continues today — restructured and leaner by design, running alongside my work with founders.</p>
       <div class="figures">
         <div><div class="fig-v">$15M</div><div class="fig-l">Revenue</div></div>
         <div><div class="fig-v">500K</div><div class="fig-l">Units</div></div>
@@ -443,7 +410,7 @@ footer {
     <div>
       <h3>Portfolio Manager</h3>
       <p class="co">Point72 Asset Management, New York</p>
-      <p class="body">Systematic global macro specializing in interest rates and FX. Built statistical models to identify asymmetric opportunities across complex market environments. Ranked among the firm's top three global macro PMs by Sharpe ratio.</p>
+      <p class="body">Systematic global macro in interest rates and FX. The creative work was in the data — reading it in novel ways, pulling in approaches that looked unrelated until they weren't. Ranked among the firm's top three global macro PMs by Sharpe ratio.</p>
     </div>
   </div>
 
@@ -571,13 +538,13 @@ I work with mission-driven founders and teams — as a fractional partner, a con
 ## Experience
 
 ### Founder & CEO — OuiSi Inc. (2015–now, Brooklyn)
-Built a company from a thesis — that disconnection was becoming the defining cultural problem of our time — into a physical-digital product platform. Invented and crafted the products. Partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. $15M revenue, 500K units, 250K homes; used in classrooms and memory care centers. The company continues today — restructured and leaner by design, running alongside my client work.
+The same instinct, aimed at a cultural problem — that disconnection was becoming the defining problem of our time. Built it into a physical-digital product platform. Invented and crafted the products. Partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. $15M revenue, 500K units, 250K homes; used in classrooms and memory care centers. The company continues today — restructured and leaner by design, running alongside my client work.
 
 ### Participant, Inaugural Cohort — THNK School of Creative Leadership (2015, Vancouver)
 Program for creative leaders working on solutions to societal challenges — the bridge between markets and founding OuiSi.
 
 ### Portfolio Manager — Point72 Asset Management (2010–2014, New York)
-Systematic global macro: interest rates and FX. Built statistical models to identify asymmetric opportunities. Top three global macro PMs at the firm by Sharpe ratio.
+Systematic global macro in interest rates and FX. The creative work was in the data — reading it in novel ways, pulling in approaches that looked unrelated until they weren't. Top three global macro PMs at the firm by Sharpe ratio.
 
 ### Portfolio Manager — Wellington Management (2006–2010, Boston)
 Helped build and run Wellington's most successful systematic investment platform. Member of the Global Macro Risk Management Committee.
