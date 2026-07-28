@@ -99,8 +99,9 @@ nav {
 .nav-link:hover { color: var(--copper); }
 .theme-btn { background: none; border: none; cursor: pointer; color: var(--ink2); font-size: 16px; }
 
-/* hero */
-.hero { padding-top: 168px; padding-bottom: 64px; }
+/* hero — centred bookend; the body below is ranged left, and the rules
+   between them make the shift deliberate rather than accidental */
+.hero { padding-top: 168px; padding-bottom: 64px; text-align: center; }
 .hero-kicker { color: var(--copper); margin-bottom: 34px; }
 .hero-kicker::before { content: '¶ '; font-family: Baskerville, Georgia, serif; letter-spacing: 0; }
 h1 {
@@ -109,7 +110,7 @@ h1 {
   line-height: 1.09; letter-spacing: -0.02em;
   text-wrap: balance;
   max-width: 860px;
-  margin-bottom: 34px;
+  margin: 0 auto 34px;
 }
 .squig { position: relative; white-space: nowrap; }
 .squig svg {
@@ -120,7 +121,7 @@ h1 {
   fill: none; stroke: var(--copper); stroke-width: 4;
   stroke-linecap: round; vector-effect: non-scaling-stroke;
 }
-.hero-sub { font-size: 20px; color: var(--ink2); max-width: 580px; line-height: 1.7; }
+.hero-sub { font-size: 20px; color: var(--ink2); max-width: 580px; line-height: 1.7; margin: 0 auto; }
 
 /* journey */
 .journey { padding-top: 40px; padding-bottom: 56px; }
@@ -132,7 +133,7 @@ h1 {
 .jlbl { font-family: system-ui, sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.2em; }
 .jlbl-f { fill: var(--fin); } .jlbl-m { fill: var(--mak); } .jlbl-x { fill: var(--mis); }
 .jera { stroke: var(--hair); stroke-width: 1.4; stroke-dasharray: 1 7; stroke-linecap: round; }
-.jyr { font-family: Baskerville, Georgia, serif; font-style: italic; font-size: 15px; fill: var(--ink2); }
+.jyr { font-family: Baskerville, Georgia, serif; font-style: italic; font-size: 18px; fill: var(--ink2); }
 .jnote {
   font-style: italic; font-size: 16px; color: var(--ink2);
   margin-top: 18px;
@@ -195,13 +196,14 @@ h1 {
 }
 
 /* contact */
-.contact { padding-top: 96px; padding-bottom: 110px; }
+/* contact — the closing bookend, centred to match the hero */
+.contact { padding-top: 96px; padding-bottom: 110px; text-align: center; }
 .contact h2 {
   font-size: clamp(30px, 4.2vw, 50px);
   font-style: italic; font-weight: 400; line-height: 1.14;
-  text-wrap: balance; max-width: 680px; margin: 0 0 20px;
+  text-wrap: balance; max-width: 680px; margin: 0 auto 20px;
 }
-.contact p { font-size: 17px; color: var(--ink2); max-width: 480px; margin: 0 0 38px; }
+.contact p { font-size: 17px; color: var(--ink2); max-width: 480px; margin: 0 auto 38px; }
 .write {
   font-family: system-ui, sans-serif;
   display: inline-block;
@@ -213,7 +215,7 @@ h1 {
   transition: transform .16s, box-shadow .16s;
 }
 .write:hover { transform: translateY(-2px) rotate(-1deg); box-shadow: 0 4px 10px rgba(25,26,31,0.14), 0 16px 36px rgba(166,106,44,0.28); }
-.clinks { margin-top: 30px; display: flex; gap: 30px; }
+.clinks { margin-top: 30px; display: flex; gap: 30px; justify-content: center; }
 .clink { font-style: italic; font-size: 17px; color: var(--ink2); text-decoration: none; }
 .clink:hover { color: var(--copper); }
 
@@ -295,8 +297,12 @@ footer {
   /* the diagram scales to ~0.36 at this width, so its labels must be
      sized in viewBox units large enough to survive the reduction */
   .jlbl { font-size: 28px; letter-spacing: 2.4px; }
-  .jyr  { font-size: 30px; }
+  /* Baskerville italic reads small; the years need more than the sans labels */
+  .jyr  { font-size: 36px; }
   .jlbl-x { transform: translate(74px, 10px); }
+  /* eight labels is too many at this width — the era marks are redundant
+     with the dated timeline directly below, so drop them on phones */
+  .jera-lbl { display: none; }
 
   .contact { padding-top: 62px; padding-bottom: 72px; }
   .approach-body { font-size: 16.5px; padding-top: 22px; }
@@ -345,8 +351,8 @@ footer {
     <text class="jyr" x="30" y="306">2001</text>
     <text class="jyr" x="412" y="306" text-anchor="end">2015</text>
     <text class="jyr" x="800" y="306">now</text>
-    <text class="jyr" x="225" y="24" text-anchor="middle">markets</text>
-    <text class="jyr" x="610" y="24" text-anchor="middle">OuiSi</text>
+    <text class="jyr jera-lbl" x="225" y="24" text-anchor="middle">markets</text>
+    <text class="jyr jera-lbl" x="610" y="24" text-anchor="middle">OuiSi</text>
     <g mask="url(#fadeMask)" id="ribbons"></g>
     <text class="jlbl jlbl-f" x="36" y="52">ANALYZING</text>
     <text class="jlbl jlbl-m" x="36" y="232">CREATING</text>
@@ -472,7 +478,7 @@ footer {
   <p class="approach-body">Find the angle, then help build toward it. I take this on as a fractional partner, a consultant, or — for the right mission — full-time.</p>
 </div>
 
-<div class="contact wrap">
+<div class="contact sec-rule wrap">
   <h2>Deep inside a problem? I'd like to hear about it.</h2>
   <p>Fractional, consulting, or full-time for the right fit. Send a short note — what you're building, and where it's stuck.</p>
   <a class="write" href="mailto:paul@ouisi.co">Write to me</a>
