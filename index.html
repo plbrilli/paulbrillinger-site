@@ -198,16 +198,23 @@ h1 {
 .use:first-child { border-top: 2px solid var(--rule); }
 .use h3 { font-size: 20px; font-weight: 600; margin-bottom: 6px; line-height: 1.32; }
 .use p { font-size: 16.5px; color: var(--ink2); line-height: 1.66; }
-.approach-body { font-size: 17.5px; color: var(--ink2); max-width: 640px; line-height: 1.72; }
+/* closing note for the section — bracketed by a rule so it reads as a
+   conclusion rather than another orphaned paragraph */
+.approach-body {
+  font-size: 18px; font-style: italic;
+  color: var(--ink); max-width: 620px; line-height: 1.68;
+  border-top: 2px solid var(--rule);
+  padding-top: 26px;
+}
 
 /* contact */
-.contact { text-align: center; padding-top: 96px; padding-bottom: 110px; }
+.contact { padding-top: 96px; padding-bottom: 110px; }
 .contact h2 {
   font-size: clamp(30px, 4.2vw, 50px);
   font-style: italic; font-weight: 400; line-height: 1.14;
-  text-wrap: balance; max-width: 680px; margin: 0 auto 20px;
+  text-wrap: balance; max-width: 680px; margin: 0 0 20px;
 }
-.contact p { font-size: 17px; color: var(--ink2); max-width: 480px; margin: 0 auto 38px; }
+.contact p { font-size: 17px; color: var(--ink2); max-width: 480px; margin: 0 0 38px; }
 .write {
   font-family: system-ui, sans-serif;
   display: inline-block;
@@ -219,7 +226,7 @@ h1 {
   transition: transform .16s, box-shadow .16s;
 }
 .write:hover { transform: translateY(-2px) rotate(-1deg); box-shadow: 0 4px 10px rgba(25,26,31,0.14), 0 16px 36px rgba(166,106,44,0.28); }
-.clinks { margin-top: 30px; display: flex; gap: 30px; justify-content: center; }
+.clinks { margin-top: 30px; display: flex; gap: 30px; }
 .clink { font-style: italic; font-size: 17px; color: var(--ink2); text-decoration: none; }
 .clink:hover { color: var(--copper); }
 
@@ -300,6 +307,15 @@ footer {
   .clinks { gap: 24px; margin-top: 26px; }
   .clink { font-size: 15.5px; }
 
+  /* the diagram scales to ~0.36 at this width, so its labels must be
+     sized in viewBox units large enough to survive the reduction */
+  .jlbl { font-size: 28px; letter-spacing: 2.4px; }
+  .jyr  { font-size: 30px; }
+  .jlbl-x { transform: translate(74px, 10px); }
+
+  .contact { padding-top: 62px; padding-bottom: 72px; }
+  .approach-body { font-size: 16.5px; padding-top: 22px; }
+
   .nav-name { font-size: 16px; }
   .nav-right { gap: 14px; }
   .nav-link { font-size: 10px; letter-spacing: 0.14em; }
@@ -373,8 +389,7 @@ footer {
 
 <div class="sec sec-rule wrap">
   <div class="sec-head">
-    <span class="caps">What I bring</span>
-    <h2 class="sec-title">Three things, usually together.</h2>
+    <h2 class="sec-title">What I bring.</h2>
   </div>
   <div class="offer-grid">
     <div class="offer">
@@ -397,7 +412,7 @@ footer {
 
 <div class="sec sec-rule wrap">
   <div class="sec-head">
-    <span class="caps">The path</span>
+    <h2 class="sec-title">My path.</h2>
   </div>
 
   <div class="entry">
@@ -483,7 +498,7 @@ footer {
       <p>Someone has to make the thing, not write the brief and hand it off.</p>
     </div>
     <div class="use">
-      <h3>A founder carrying more than they can put down.</h3>
+      <h3>A founder carrying too much alone.</h3>
       <p>Sometimes what helps most is a clear head across the table with no stake in being right.</p>
     </div>
   </div>
@@ -491,7 +506,6 @@ footer {
 </div>
 
 <div class="contact wrap">
-  <p class="caps" style="margin-bottom: 22px;">Work together</p>
   <h2>Deep inside a problem? I'd like to hear about it.</h2>
   <p>Fractional, consulting, or full-time for the right fit. Send a short note — what you're building, and where it's stuck.</p>
   <a class="write" href="mailto:paul@ouisi.co">Write to me</a>
