@@ -141,6 +141,9 @@ h1 {
 
 /* sections */
 .sec { padding-top: 78px; padding-bottom: 78px; }
+.why p { font-size: 19px; color: var(--ink2); max-width: 660px; line-height: 1.72; }
+.why p + p { margin-top: 22px; }
+.why p:last-of-type { color: var(--ink); font-style: italic; }
 .thesis {
   font-size: clamp(26px, 3.4vw, 40px);
   font-style: italic; line-height: 1.35;
@@ -301,10 +304,7 @@ footer {
   .jlbl { font-size: 28px; letter-spacing: 2.4px; }
   /* Baskerville italic reads small; the years need more than the sans labels */
   .jyr  { font-size: 36px; }
-  .jlbl-x { transform: translate(74px, 10px); }
-  /* eight labels is too many at this width — the era marks are redundant
-     with the dated timeline directly below, so drop them on phones */
-  .jera-lbl { display: none; }
+  .jlbl-x { transform: translate(0, 0); }
 
   .contact { padding-top: 62px; padding-bottom: 72px; }
   .approach-body { font-size: 16.5px; margin-top: 38px; }
@@ -347,19 +347,28 @@ footer {
       </linearGradient>
       <mask id="fadeMask"><rect x="0" y="0" width="920" height="320" fill="url(#fadeR)"/></mask>
     </defs>
-    <line class="jera" x1="30" y1="34" x2="30" y2="282"/>
-    <line class="jera" x1="420" y1="34" x2="420" y2="282"/>
-    <line class="jera" x1="800" y1="34" x2="800" y2="282"/>
-    <text class="jyr" x="30" y="306">2001</text>
-    <text class="jyr" x="412" y="306" text-anchor="end">2015</text>
-    <text class="jyr" x="800" y="306">now</text>
-    <text class="jyr jera-lbl" x="225" y="24" text-anchor="middle">markets</text>
-    <text class="jyr jera-lbl" x="610" y="24" text-anchor="middle">OuiSi</text>
+    <line class="jera" x1="30"  y1="34" x2="30"  y2="288"/>
+    <line class="jera" x1="237" y1="34" x2="237" y2="288"/>
+    <line class="jera" x1="474" y1="34" x2="474" y2="288"/>
+    <line class="jera" x1="800" y1="34" x2="800" y2="288"/>
+    <text class="jyr" x="30"  y="312">2000</text>
+    <text class="jyr" x="237" y="312">2007</text>
+    <text class="jyr" x="474" y="312">2015</text>
+    <text class="jyr" x="800" y="312">now</text>
     <g mask="url(#fadeMask)" id="ribbons"></g>
-    <text class="jlbl jlbl-f" x="36" y="52">ANALYZING</text>
-    <text class="jlbl jlbl-m" x="36" y="232">CREATING</text>
-    <text class="jlbl jlbl-x" x="446" y="286">CONNECTING</text>
+    <text class="jlbl jlbl-f" x="34"  y="50">ANALYSIS</text>
+    <text class="jlbl jlbl-m" x="227" y="212" text-anchor="end">CREATIVITY</text>
+    <text class="jlbl jlbl-x" x="464" y="274" text-anchor="end">CONNECTION</text>
   </svg>
+</div>
+
+<div class="sec sec-rule wrap why">
+  <div class="sec-head">
+    <h2 class="sec-title">Why this work.</h2>
+  </div>
+  <p>The thread through all of it is connection. Between ideas that don't obviously belong together, and between people.</p>
+  <p>In markets that meant reading data nobody had thought to put side by side. At OuiSi it meant building something that gets people looking at each other again. What lights me up is the same in both: the moment something stuck comes unstuck because someone saw it from another side.</p>
+  <p>That's the work I want to keep doing.</p>
 </div>
 
 <div class="sec sec-rule wrap">
@@ -379,7 +388,7 @@ footer {
     </div>
     <div class="offer">
       <span class="mark">c.</span>
-      <h3>Build the thing</h3>
+      <h3>Help build the thing</h3>
       <p>I've made products, run a P&amp;L, and negotiated partnerships. I'd rather do the work than write the deck about it.</p>
     </div>
   </div>
@@ -496,9 +505,11 @@ footer {
 <script>
 (function () {
   const streams = [
-    { cls: 'rib rib-f', pts: [[30,84,17],[200,84,17],[360,88,16],[470,116,14],[560,146,13],[640,152,12],[720,146,12],[800,142,11],[890,140,11]] },
-    { cls: 'rib rib-m', pts: [[30,196,7],[200,193,7],[360,190,8],[460,178,10],[560,160,12],[630,130,12],[700,142,13],[780,158,13],[890,160,13]] },
-    { cls: 'rib rib-x', pts: [[420,262,5],[500,246,6],[580,216,7],[660,190,8],[740,180,8],[800,177,8],[890,176,8]] }
+    // [x, centreY, halfWidth] — each stream begins the year it entered the work:
+    // analysis 2000, creativity 2007, connection 2015
+    { cls: 'rib rib-f', pts: [[30,84,18],[180,84,18],[330,88,17],[474,108,15],[580,138,13],[660,150,12],[740,147,11],[800,144,11],[890,142,11]] },
+    { cls: 'rib rib-m', pts: [[237,206,4],[320,203,6],[400,197,8],[474,187,10],[560,168,12],[640,139,13],[710,150,13],[780,161,13],[890,162,13]] },
+    { cls: 'rib rib-x', pts: [[474,268,4],[545,256,6],[615,229,7],[685,201,8],[750,187,8],[800,181,8],[890,179,8]] }
   ];
   function smoothPath(pts, move) {
     let d = (move ? 'M' : 'L') + pts[0][0] + ',' + pts[0][1];
@@ -533,10 +544,13 @@ Brooklyn & the Hudson Valley · paul@ouisi.co · linkedin.com/in/paul-brillinger
 
 That's been my work twice over. Global macro at Wellington and Point72, then a company I built from a thesis about human connection. Now I'd like to do it inside someone else's. Looking for the right company full-time, and taking on a few fractional engagements alongside.
 
+## Why this work
+The thread through all of it is connection. Between ideas that don't obviously belong together, and between people. In markets that meant reading data nobody had thought to put side by side. At OuiSi it meant building something that gets people looking at each other again. What lights me up is the same in both: the moment something stuck comes unstuck because someone saw it from another side.
+
 ## What I bring
 - **Understand the why.** A venture runs on more than a plan. It runs on what drives the team, and the "why" is usually where the angle hides.
 - **See the angle.** Markets taught me to creatively ask what's mispriced and why. I bring the same discipline to products, categories, and business models.
-- **Build the thing.** I've made products, run a P&L, and negotiated partnerships. I'd rather do the work than write the deck about it.
+- **Help build the thing.** I've made products, run a P&L, and negotiated partnerships. I'd rather do the work than write the deck about it.
 
 ## Where I'm most useful
 - A company with traction that's lost the thread.
