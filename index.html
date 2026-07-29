@@ -505,13 +505,13 @@ footer {
 <script>
 (function () {
   const streams = [
-    // [x, centreY, halfWidth] — each stream begins the year it entered the work:
-    // analysis 2000, creativity 2007, connection 2015
-    { cls: 'rib rib-f', pts: [[30,84,18],[180,84,18],[330,88,17],[474,108,15],[580,138,13],[660,150,12],[740,147,11],[800,144,11],[890,142,11]] },
-    { cls: 'rib rib-m', pts: [[237,206,4],[320,203,6],[400,197,8],[474,187,10],[560,168,12],[640,139,13],[710,150,13],[780,161,13],[890,162,13]] },
-    // connection arcs up over the other two before settling beneath them:
-    // it touches everything rather than running alongside
-    { cls: 'rib rib-x', pts: [[474,268,4],[534,242,6],[586,196,7],[630,144,8],[668,98,9],[706,72,10],[746,86,10],[784,122,9],[818,152,9],[852,171,8],[890,180,8]] }
+    // [x, centreY, halfWidth]. Each stream begins the year it entered the
+    // work (analysis 2000, creativity 2007, connection 2015), and each moves
+    // with a different temperament: analysis is steady, creativity waves,
+    // connection is the most alive of the three.
+    { cls: 'rib rib-f', pts: [[30,84,18],[180,84,18],[330,86,17],[474,104,15],[580,132,13],[680,146,12],[780,146,11],[890,144,11]] },
+    { cls: 'rib rib-m', pts: [[237,206,4],[300,199,6],[358,184,7],[416,196,8],[474,174,10],[534,148,11],[592,162,12],[650,130,13],[710,152,13],[780,164,13],[890,166,13]] },
+    { cls: 'rib rib-x', pts: [[474,268,4],[524,250,5],[568,252,6],[614,206,7],[654,214,8],[692,138,9],[724,78,10],[758,96,10],[790,74,10],[826,124,9],[856,164,9],[880,180,8],[890,186,8]] }
   ];
   function smoothPath(pts, move) {
     let d = (move ? 'M' : 'L') + pts[0][0] + ',' + pts[0][1];
