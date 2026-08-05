@@ -151,6 +151,44 @@ h1 {
 
 /* sections */
 .sec { padding-top: 78px; padding-bottom: 78px; }
+/* hero is a short statement, not a slogan, so it is set smaller than a display line */
+.hero-statement {
+  font-size: clamp(23px, 2.9vw, 34px);
+  font-style: italic; line-height: 1.42; letter-spacing: -0.005em;
+  max-width: 780px; margin: 0 auto; text-wrap: pretty;
+}
+.hero-statement .lead { color: var(--ink); }
+.hero-statement .rest { color: var(--ink2); }
+
+/* receipts: plain facts, stated once, no adjectives */
+.receipts { border-top: 2px solid var(--rule); border-bottom: 1px solid var(--hair); }
+.receipts-in {
+  max-width: 960px; margin: 0 auto;
+  padding: 26px 48px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px;
+}
+.rcp-k {
+  font-family: system-ui, sans-serif;
+  font-size: 9.5px; font-weight: 700; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ink2); margin-bottom: 7px;
+}
+.rcp-v { font-size: 16px; color: var(--ink); line-height: 1.5; }
+
+/* the two moves, numbered because they genuinely happen in order */
+.moves { max-width: 720px; }
+.move { display: grid; grid-template-columns: 30px 1fr; gap: 20px; padding: 20px 0; }
+.move + .move { border-top: 1px solid var(--hair); }
+.move-n { font-style: italic; font-size: 22px; color: var(--copper); line-height: 1.1; }
+.move p { font-size: 17px; color: var(--ink2); line-height: 1.68; }
+.moves-note { font-size: 18px; font-style: italic; color: var(--ink); max-width: 640px; margin-top: 34px; }
+
+/* outcomes */
+.outcomes { max-width: 700px; }
+.outcome { padding: 18px 0; font-size: 17.5px; color: var(--ink2); line-height: 1.6; }
+.outcome + .outcome { border-top: 1px solid var(--hair); }
+.outcome b { color: var(--ink); font-weight: 600; }
+.filter-note { font-size: 17px; font-style: italic; color: var(--ink2); margin-top: 30px; }
+
 .why p { font-size: 19px; color: var(--ink2); max-width: 660px; line-height: 1.72; }
 .why p + p { margin-top: 22px; }
 /* the present-tense paragraph carries full ink; the two past-tense ones sit back */
@@ -261,6 +299,7 @@ footer {
   .nav-in { padding: 0 20px; }
   .hero { padding-top: 128px; padding-bottom: 44px; }
   .offer-grid { grid-template-columns: 1fr; gap: 26px; }
+  .receipts-in { grid-template-columns: 1fr; gap: 20px; padding: 22px 26px; }
   .entry { grid-template-columns: 1fr; gap: 8px; }
   .sec-head { flex-direction: column; gap: 8px; margin-bottom: 26px; }
 }
@@ -280,6 +319,10 @@ footer {
   .journey { padding-top: 22px; padding-bottom: 40px; }
 
   .sec { padding-top: 46px; padding-bottom: 46px; }
+  .receipts-in { padding: 20px 22px; }
+  .move { grid-template-columns: 24px 1fr; gap: 14px; }
+  .move p { font-size: 16px; }
+  .moves-note, .outcome { font-size: 16px; }
   .sec-head { margin-bottom: 22px; }
   .sec-title { font-size: 25px; line-height: 1.25; }
 
@@ -342,10 +385,29 @@ footer {
   </div>
 </nav>
 
-<div class="hero wrap">
+<div class="hero wrap" id="top">
   <p class="caps hero-kicker">Brooklyn &amp; the Hudson Valley · Strategy · New ventures · Product</p>
-  <h1>Stuck companies rarely need more effort. They need a better <span class="squig">angle<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2,6 Q22,2 44,6 T98,5"/></svg></span>.</h1>
-  <p class="hero-sub">That's been my work twice over. Global macro at Wellington and Point72, then a company I built from a thesis about human connection. Now I'd like to do it inside someone else's.</p>
+  <p class="hero-statement">
+    <span class="lead">For many founders, building a company can be surprisingly or subconsciously personal. What they are building often fills in for an unmet need, or scratches an existential itch they can't quite name.</span>
+    <span class="rest"> Between that and being too close to the company's biggest problems, they need help finding the right angle to overcome obstacles.</span>
+  </p>
+</div>
+
+<div class="receipts">
+  <div class="receipts-in">
+    <div>
+      <div class="rcp-k">Markets, 2001&ndash;2014</div>
+      <div class="rcp-v">Deutsche Bank · FairLane · Wellington · Point72</div>
+    </div>
+    <div>
+      <div class="rcp-k">Built</div>
+      <div class="rcp-v">OuiSi. $15M revenue, 500K units, 250K homes</div>
+    </div>
+    <div>
+      <div class="rcp-k">Partnerships</div>
+      <div class="rcp-v">The Getty · Boston MFA · Smithsonian · Paramount</div>
+    </div>
+  </div>
 </div>
 
 <div class="journey wrap">
@@ -385,36 +447,54 @@ footer {
   </svg>
 </div>
 
-<div class="sec sec-rule wrap why">
+<div class="sec sec-rule wrap">
   <div class="sec-head">
-    <h2 class="sec-title">Why this work.</h2>
+    <h2 class="sec-title">How I work.</h2>
   </div>
-  <p>The thread through all of it is connection. Making connections, finding connections, noticing connections.</p>
-  <p>In markets that meant creative manipulation of data that no one thought to put side by side. At OuiSi it meant building something that fosters connectedness: with the world around us, with each other, with our inner selves.</p>
-  <p>Now, it's addressing problems that require a fresh angle, human understanding, curiosity and flexibility. Between ideas that don't obviously belong together, and between people.</p>
+  <div class="moves">
+    <div class="move">
+      <div class="move-n">i.</div>
+      <p>I work with people to understand how their needs and ways of working have led to current challenges.</p>
+    </div>
+    <div class="move">
+      <div class="move-n">ii.</div>
+      <p>I use my analytical and creative background to help find a new angle on a seemingly exhausted effort.</p>
+    </div>
+  </div>
+  <p class="moves-note">Teams rarely lack effort, but they may be forcing things from the wrong perspective.</p>
 </div>
 
 <div class="sec sec-rule wrap">
   <div class="sec-head">
-    <h2 class="sec-title">What I bring.</h2>
+    <h2 class="sec-title">What you're left with.</h2>
   </div>
-  <div class="offer-grid">
-    <div class="offer">
-      <span class="mark">a.</span>
-      <h3>Understand the why</h3>
-      <p>A venture runs on more than a plan. It runs on what drives the team. I read that terrain well, and the "why" is usually where the angle hides.</p>
+  <div class="outcomes">
+    <div class="outcome"><b>A deeper self-awareness</b> as it relates to the company.</div>
+    <div class="outcome"><b>A new understanding of, and approach to, a problem.</b></div>
+    <div class="outcome"><b>A revitalized sense of creativity and purpose.</b></div>
+  </div>
+  <p class="filter-note">I work best with teams that are in it for the mission and the money. Not just the money.</p>
+</div>
+
+<div class="sec sec-rule wrap">
+  <div class="sec-head">
+    <h2 class="sec-title">Where I'm most useful.</h2>
+  </div>
+  <div class="useful">
+    <div class="use">
+      <h3>A company with traction that's lost the thread.</h3>
+      <p>You've proven something works. What it should become is a harder question, and the wrong answer is expensive.</p>
     </div>
-    <div class="offer">
-      <span class="mark">b.</span>
-      <h3>See the angle</h3>
-      <p>Markets taught me to creatively ask what's mispriced and why. I bring the same discipline to products, categories, and business models.</p>
+    <div class="use">
+      <h3>A product that needs inventing, not just specifying.</h3>
+      <p>Someone has to make the thing, not write the brief and hand it off.</p>
     </div>
-    <div class="offer">
-      <span class="mark">c.</span>
-      <h3>Help build the thing</h3>
-      <p>I've made products, run a P&amp;L, and negotiated partnerships. I'd rather do the work than write the deck about it.</p>
+    <div class="use">
+      <h3>A founder carrying too much alone.</h3>
+      <p>Sometimes what helps most is a clear head across the table with no stake in being right.</p>
     </div>
   </div>
+  <p class="approach-body">I'm looking for the right company to do this in full-time, and take on a few fractional engagements alongside.</p>
 </div>
 
 <div class="sec sec-rule wrap">
@@ -491,25 +571,13 @@ footer {
   </div>
 </div>
 
-<div class="sec sec-rule wrap">
+<div class="sec sec-rule wrap why">
   <div class="sec-head">
-    <h2 class="sec-title">Where I'm most useful.</h2>
+    <h2 class="sec-title">Why this work.</h2>
   </div>
-  <div class="useful">
-    <div class="use">
-      <h3>A company with traction that's lost the thread.</h3>
-      <p>You've proven something works. What it should become is a harder question, and the wrong answer is expensive.</p>
-    </div>
-    <div class="use">
-      <h3>A product that needs inventing, not just specifying.</h3>
-      <p>Someone has to make the thing, not write the brief and hand it off.</p>
-    </div>
-    <div class="use">
-      <h3>A founder carrying too much alone.</h3>
-      <p>Sometimes what helps most is a clear head across the table with no stake in being right.</p>
-    </div>
-  </div>
-  <p class="approach-body">Find the angle, then help build toward it. I'm looking for the right company to do that in full-time, and take on a few fractional engagements alongside.</p>
+  <p>The thread through all of it is connection. Making connections, finding connections, noticing connections.</p>
+  <p>In markets that meant creative manipulation of data that no one thought to put side by side. At OuiSi it meant building something that fosters connectedness: with the world around us, with each other, with our inner selves.</p>
+  <p>Now, it's addressing problems that require a fresh angle, human understanding, curiosity and flexibility. Between ideas that don't obviously belong together, and between people.</p>
 </div>
 
 <div class="contact sec-rule wrap">
@@ -537,26 +605,27 @@ document.getElementById('copymd').addEventListener('click', async () => {
   const md = `# Paul Brillinger
 Brooklyn & the Hudson Valley · paul@ouisi.co · linkedin.com/in/paul-brillinger
 
-*Stuck companies rarely need more effort. They need a better angle.*
+*Many companies are, surprisingly or subconsciously, a founder's own existential exploration. What they build often fills in for an unmet need.*
 
-That's been my work twice over. Global macro at Wellington and Point72, then a company I built from a thesis about human connection. Now I'd like to do it inside someone else's. Looking for the right company full-time, and taking on a few fractional engagements alongside.
+Between that and being too close to the company's biggest problems, teams need help finding the right angle. That's where I come in.
 
-## Why this work
-The thread through all of it is connection. Making connections, finding connections, noticing connections.
+## How I work
+1. I work with people to understand how their needs and ways of working have led to current challenges.
+2. I use my analytical and creative background to help find a new angle on a seemingly exhausted effort.
 
-In markets that meant creative manipulation of data that no one thought to put side by side. At OuiSi it meant building something that fosters connectedness: with the world around us, with each other, with our inner selves.
+Teams rarely lack effort, but they may be forcing things from the wrong perspective.
 
-Now, it's addressing problems that require a fresh angle, human understanding, curiosity and flexibility. Between ideas that don't obviously belong together, and between people.
+## What you're left with
+- A deeper self-awareness as it relates to the company.
+- A new understanding of, and approach to, a problem.
+- A revitalized sense of creativity and purpose.
 
-## What I bring
-- **Understand the why.** A venture runs on more than a plan. It runs on what drives the team, and the "why" is usually where the angle hides.
-- **See the angle.** Markets taught me to creatively ask what's mispriced and why. I bring the same discipline to products, categories, and business models.
-- **Help build the thing.** I've made products, run a P&L, and negotiated partnerships. I'd rather do the work than write the deck about it.
+I work best with teams that are in it for the mission and the money. Not just the money.
 
 ## Where I'm most useful
 - A company with traction that's lost the thread.
 - A product that needs inventing, not just specifying.
-- A founder carrying more than they can put down.
+- A founder carrying too much alone.
 
 ## Experience
 
