@@ -159,6 +159,10 @@ h1 {
 }
 .hero-statement .lead { color: var(--ink); }
 .hero-statement .rest { color: var(--ink2); }
+.hero-bridge {
+  font-size: 17px; color: var(--ink2); line-height: 1.7;
+  max-width: 620px; margin: 28px auto 0;
+}
 
 /* receipts: plain facts, stated once, no adjectives */
 .receipts { border-top: 2px solid var(--rule); border-bottom: 1px solid var(--hair); }
@@ -191,7 +195,7 @@ h1 {
 .outcome { padding: 18px 0; font-size: 17.5px; color: var(--ink2); line-height: 1.6; }
 .outcome + .outcome { border-top: 1px solid var(--hair); }
 .outcome b { color: var(--ink); font-weight: 600; }
-.filter-note { font-size: 17px; font-style: italic; color: var(--ink2); margin-top: 30px; }
+
 
 .why p { font-size: 19px; color: var(--ink2); max-width: 660px; line-height: 1.72; }
 .why p + p { margin-top: 22px; }
@@ -231,9 +235,10 @@ h1 {
 .entry h3 { font-size: 22px; font-weight: 600; margin-bottom: 3px; }
 .co { font-size: 16px; color: var(--ink2); font-style: italic; margin-bottom: 12px; }
 .entry .body { font-size: 16.5px; color: var(--ink2); line-height: 1.7; max-width: 580px; }
+.entry .body + .body { margin-top: 15px; }
 .figures { display: flex; gap: 36px; margin-top: 18px; }
 .fig-v { font-size: 24px; font-style: italic; color: var(--ink); }
-.fig-l { font-family: system-ui, sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink2); margin-top: 2px; }
+.fig-l { font-family: system-ui, sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink2); margin-top: 4px; line-height: 1.45; }
 
 /* approach — where I'm useful */
 .useful { max-width: 740px; margin-bottom: 46px; }
@@ -246,10 +251,12 @@ h1 {
 .use p { font-size: 16.5px; color: var(--ink2); line-height: 1.66; }
 /* closing note — set apart by space and voice (italic, full ink), not by
    another rule; 2px is reserved for section boundaries alone */
-.approach-body {
-  font-size: 18px; font-style: italic;
+/* section-closing note. One treatment, used by every section that ends on an
+   authorial aside, so italic keeps meaning the same thing everywhere. */
+.filter-note {
+  font-size: 17px; font-style: italic;
   color: var(--ink); max-width: 620px; line-height: 1.68;
-  margin-top: 52px;
+  margin-top: 40px;
 }
 
 /* contact */
@@ -326,7 +333,7 @@ footer {
   .receipts-in { padding: 20px 22px; }
   .move { grid-template-columns: 24px 1fr; gap: 14px; }
   .move p { font-size: 16px; }
-  .moves-note, .outcome, .moves-lead { font-size: 16px; }
+  .moves-note, .outcome, .moves-lead, .filter-note { font-size: 16px; }
   .sec-head { margin-bottom: 22px; }
   .sec-title { font-size: 25px; line-height: 1.25; }
 
@@ -346,7 +353,6 @@ footer {
   .use h3 { font-size: 17.5px; line-height: 1.3; }
   .use p { font-size: 15px; line-height: 1.58; }
   .useful { margin-bottom: 32px; }
-  .approach-body { font-size: 16px; line-height: 1.62; }
 
   .contact { padding-top: 62px; padding-bottom: 72px; }
   .contact h2 { font-size: 27px; line-height: 1.2; }
@@ -365,7 +371,6 @@ footer {
   .jlbl-x { transform: translate(0, 0); }
 
   .contact { padding-top: 62px; padding-bottom: 72px; }
-  .approach-body { font-size: 16.5px; margin-top: 38px; }
 
   .nav-name { font-size: 16px; }
   .nav-right { gap: 14px; }
@@ -395,6 +400,7 @@ footer {
     <span class="lead">For many founders, building a company can be surprisingly or subconsciously personal. What they are building often fills in for an unmet need, or scratches an existential itch they can't quite name.</span>
     <span class="rest"> Between that and being too close to the company's biggest problems, they need help finding the right angle to overcome obstacles.</span>
   </p>
+  <p class="hero-bridge">That's been my work twice over. Global macro investing at Wellington and Point72, then OuiSi, a company I built from a thesis about human connection.</p>
 </div>
 
 <div class="receipts">
@@ -405,7 +411,7 @@ footer {
     </div>
     <div>
       <div class="rcp-k">Built</div>
-      <div class="rcp-v">OuiSi. $15M revenue, 500K units, 250K homes</div>
+      <div class="rcp-v">OuiSi. $15M LTD revenue, 500K units sold, 250K homes and classrooms</div>
     </div>
     <div>
       <div class="rcp-k">Partnerships</div>
@@ -455,15 +461,15 @@ footer {
   <div class="sec-head">
     <h2 class="sec-title">How I work.</h2>
   </div>
-  <p class="moves-lead">Both halves are connection, pointed in two directions. Between people, to find the why. Between ideas that don't obviously belong together, to find the how.</p>
+  <p class="moves-lead">Both halves are connection, pointed in two directions. One at the people, to find the why. One at the ideas, to find the how.</p>
   <div class="moves">
     <div class="move">
       <div class="move-n">i.</div>
-      <p>I work with people to understand how their needs and ways of working have led to current challenges. Usually that means reconnecting a team with why they started.</p>
+      <p>I work with people to understand how their needs and ways of working have led to current challenges. Usually that means reconnecting a team with why they started. A venture runs on more than a plan. It runs on what drives the team.</p>
     </div>
     <div class="move">
       <div class="move-n">ii.</div>
-      <p>I use my analytical and creative background to help find a new angle on a seemingly exhausted effort.</p>
+      <p>I use my analytical and creative background to help find a new angle on a seemingly exhausted effort. I've come up with ideas, made products, run a P&amp;L, and negotiated partnerships.</p>
     </div>
   </div>
   <p class="moves-note">Teams rarely lack effort, but they may be forcing things from the wrong perspective.</p>
@@ -488,18 +494,17 @@ footer {
   <div class="useful">
     <div class="use">
       <h3>A company with traction that's lost the thread.</h3>
-      <p>You've proven something works. What it should become is a harder question, and the wrong answer is expensive.</p>
+      <p>You've proven something works. I help discover how it should evolve, often by getting back to the "why" behind it.</p>
     </div>
     <div class="use">
       <h3>A product that needs inventing, not just specifying.</h3>
-      <p>Someone has to make the thing, not write the brief and hand it off.</p>
+      <p>Someone has to help make the thing, not write a brief and hand it off.</p>
     </div>
     <div class="use">
       <h3>A founder carrying too much alone.</h3>
-      <p>Sometimes what helps most is a clear head across the table with no stake in being right.</p>
+      <p>Sometimes what helps most is a clear, like-minded head across the table with no stake in being right.</p>
     </div>
   </div>
-  <p class="approach-body">I'm looking for the right company to do this in full-time, and take on a few fractional engagements alongside.</p>
 </div>
 
 <div class="sec sec-rule wrap">
@@ -512,11 +517,12 @@ footer {
     <div>
       <h3>Founder &amp; CEO</h3>
       <p class="co">OuiSi Inc., Brooklyn</p>
-      <p class="body">The same instinct, aimed at a cultural problem: that disconnection was becoming the defining problem of our time. Built it into a physical-digital product platform. Invented and crafted the products. Built partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. OuiSi lives in homes, classrooms, and memory care centers across the country. The company continues today, restructured and leaner by design. It's no longer a full-time job.</p>
+      <p class="body">Disconnection (otherness) is the defining problem of our time. Built it into a physical-digital product platform. I invented and crafted products that foster creativity, curiosity and connection. I built partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. OuiSi lives in homes, classrooms, and memory care centers across the country.</p>
+      <p class="body">The company continues today, restructured and leaner by design. While it's no longer a full-time job, I'm using free time to expand OuiSi's digital footprint at home, in the classroom and in therapeutic settings.</p>
       <div class="figures">
-        <div><div class="fig-v">$15M</div><div class="fig-l">Revenue</div></div>
-        <div><div class="fig-v">500K</div><div class="fig-l">Units</div></div>
-        <div><div class="fig-v">250K</div><div class="fig-l">Homes</div></div>
+        <div><div class="fig-v">$15M</div><div class="fig-l">LTD Revenue</div></div>
+        <div><div class="fig-v">500K</div><div class="fig-l">Units Sold</div></div>
+        <div><div class="fig-v">250K</div><div class="fig-l">Homes and<br>Classrooms</div></div>
       </div>
     </div>
   </div>
@@ -571,7 +577,7 @@ footer {
     <div>
       <h3>BMath Actuarial Science · MMF Mathematical Finance</h3>
       <p class="co">University of Waterloo (1996–2001) · University of Toronto (2002–2003)</p>
-      <p class="body">The quantitative foundation for systematic, model-driven investing, and just as much for creative problem solving. Most of the MMF ran alongside the trading desk at Deutsche Bank.</p>
+      <p class="body">The quantitative foundation for systematic, model-driven investing, and just as much for creative problem solving. Most of the MMF ran alongside time on the trading desk at Deutsche Bank.</p>
     </div>
   </div>
 </div>
@@ -582,12 +588,12 @@ footer {
   </div>
   <p>The thread through all of it is connection. Making connections, finding connections, noticing connections.</p>
   <p>In markets that meant creative manipulation of data that no one thought to put side by side. At OuiSi it meant building something that fosters connectedness: with the world around us, with each other, with our inner selves.</p>
-  <p>Now, it's addressing problems that require a fresh angle, human understanding, curiosity and flexibility.</p>
+  <p>Now, it's addressing problems that require a fresh angle, human understanding, curiosity and flexibility. Between ideas that don't obviously belong together, between people, between digital and physical.</p>
 </div>
 
 <div class="contact sec-rule wrap">
   <h2>Deep inside a problem? I'd like to hear about it.</h2>
-  <p>Full-time for the right mission, or fractional alongside. Send a short note: what you're building, and where it's stuck.</p>
+  <p>Part or full-time for the right mission, and/or fractional alongside. Send a short note: what you're building, and where it's stuck.</p>
   <a class="write" href="mailto:paul@ouisi.co">Write to me</a>
   <div class="clinks">
     <a class="clink" href="https://www.linkedin.com/in/paul-brillinger" target="_blank" rel="noopener">LinkedIn</a>
@@ -612,13 +618,13 @@ Brooklyn & the Hudson Valley · paul@ouisi.co · linkedin.com/in/paul-brillinger
 
 *Many companies are, surprisingly or subconsciously, a founder's own existential exploration. What they build often fills in for an unmet need.*
 
-Between that and being too close to the company's biggest problems, teams need help finding the right angle. That's where I come in.
+Between that and being too close to the company's biggest problems, teams need help finding the right angle. That's been my work twice over. Global macro investing at Wellington and Point72, then OuiSi, a company I built from a thesis about human connection.
 
 ## How I work
-Both halves are connection, pointed in two directions. Between people, to find the why. Between ideas that don't obviously belong together, to find the how.
+Both halves are connection, pointed in two directions. One at the people, to find the why. One at the ideas, to find the how.
 
-1. I work with people to understand how their needs and ways of working have led to current challenges. Usually that means reconnecting a team with why they started.
-2. I use my analytical and creative background to help find a new angle on a seemingly exhausted effort.
+1. I work with people to understand how their needs and ways of working have led to current challenges. Usually that means reconnecting a team with why they started. A venture runs on more than a plan. It runs on what drives the team.
+2. I use my analytical and creative background to help find a new angle on a seemingly exhausted effort. I've come up with ideas, made products, run a P&L, and negotiated partnerships.
 
 Teams rarely lack effort, but they may be forcing things from the wrong perspective.
 
@@ -630,14 +636,14 @@ Teams rarely lack effort, but they may be forcing things from the wrong perspect
 I work best with teams that are in it for the mission and the money. Not just the money.
 
 ## Where I'm most useful
-- A company with traction that's lost the thread.
+- A company with traction that's lost the thread. I help discover how it should evolve, often by getting back to the "why" behind it.
 - A product that needs inventing, not just specifying.
 - A founder carrying too much alone.
 
 ## Experience
 
 ### Founder & CEO, OuiSi Inc. (2015–now, Brooklyn)
-The same instinct, aimed at a cultural problem: that disconnection was becoming the defining problem of our time. Built it into a physical-digital product platform. Invented and crafted the products. Partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. $15M revenue, 500K units, 250K homes; used in classrooms and memory care centers. The company continues today, restructured and leaner by design. It's no longer a full-time job.
+The same instinct, aimed at a cultural problem: that disconnection was becoming the defining problem of our time. Built it into a physical-digital product platform. Invented and crafted the products. Partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. $15M LTD revenue, 500K units sold, 250K homes and classrooms; used in classrooms and memory care centers. The company continues today, restructured and leaner by design. While it's no longer a full-time job, I'm using free time to expand OuiSi's digital footprint at home, in the classroom and in therapeutic settings.
 
 ### Participant, Inaugural Cohort, THNK School of Creative Leadership (2015, Vancouver)
 Program for creative leaders working on solutions to societal challenges. It bridged markets and founding OuiSi.
