@@ -112,12 +112,14 @@ nav {
 .hero { padding-top: 168px; padding-bottom: 64px; text-align: center; }
 .hero-kicker { color: var(--copper); margin-bottom: 34px; }
 .hero-kicker::before { content: '¶ '; font-family: Baskerville, Georgia, serif; letter-spacing: 0; }
+/* sized so the two lines both sit inside the text column with visible margin.
+   at 70px/860px the longer line ran the full column width and read as overflow. */
 h1 {
-  font-size: clamp(38px, 5.8vw, 70px);
+  font-size: clamp(36px, 5.1vw, 62px);
   font-weight: 400; font-style: italic;
-  line-height: 1.09; letter-spacing: -0.02em;
+  line-height: 1.12; letter-spacing: -0.018em;
   text-wrap: balance;
-  max-width: 860px;
+  max-width: 800px;
   margin: 0 auto 34px;
 }
 .squig { position: relative; white-space: nowrap; }
@@ -129,7 +131,7 @@ h1 {
   fill: none; stroke: var(--copper); stroke-width: 4;
   stroke-linecap: round; vector-effect: non-scaling-stroke;
 }
-.hero-sub { font-size: 20px; color: var(--ink2); max-width: 580px; line-height: 1.7; margin: 0 auto; }
+.hero-sub { font-size: 20px; color: var(--ink2); max-width: 620px; line-height: 1.7; margin: 0 auto; }
 
 /* journey */
 .journey { padding-top: 40px; padding-bottom: 56px; }
@@ -448,7 +450,6 @@ footer {
     </div>
     <div class="use">
       <h3>A product that needs inventing, not just specifying.</h3>
-      <p>Someone has to help make the thing, not write a brief and hand it off.</p>
     </div>
     <div class="use">
       <h3>A founder carrying too much alone.</h3>
