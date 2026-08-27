@@ -110,7 +110,9 @@ nav {
 /* hero — centred bookend; the body below is ranged left, and the rules
    between them make the shift deliberate rather than accidental */
 .hero { padding-top: 168px; padding-bottom: 64px; text-align: center; }
+/* the work reads in the accent; the place sits back so it does not compete */
 .hero-kicker { color: var(--copper); margin-bottom: 34px; }
+.hero-kicker .k-place { color: var(--ink2); }
 /* sized so the two lines both sit inside the text column with visible margin.
    at 70px/860px the longer line ran the full column width and read as overflow. */
 h1 {
@@ -162,17 +164,9 @@ h1 {
 .move p { font-size: 17px; color: var(--ink2); line-height: 1.68; }
 .moves-note { font-size: 18px; font-style: italic; color: var(--ink); max-width: 640px; margin-top: 34px; }
 
-/* outcomes */
-.outcomes { max-width: 700px; }
-.outcome { padding: 18px 0; font-size: 17.5px; color: var(--ink2); line-height: 1.6; }
-.outcome + .outcome { border-top: 1px solid var(--hair); }
-.outcome b { color: var(--ink); font-weight: 600; }
 
 
-.why p { font-size: 19px; color: var(--ink2); max-width: 660px; line-height: 1.72; }
-.why p + p { margin-top: 22px; }
 /* the present-tense paragraph carries full ink; the two past-tense ones sit back */
-.why p:last-of-type { color: var(--ink); }
 .thesis {
   font-size: clamp(26px, 3.4vw, 40px);
   font-style: italic; line-height: 1.35;
@@ -184,6 +178,7 @@ h1 {
 .sec-head { display: flex; align-items: baseline; gap: 26px; margin-bottom: 34px; }
 .sec-head .caps { flex-shrink: 0; }
 .sec-title { font-size: clamp(28px, 3.4vw, 40px); font-style: italic; font-weight: 400; }
+.sec-title, .use h3, .move-t, .entry h3, .contact h2 { text-wrap: balance; }
 
 /* offers — three columns, no cards, big drop numerals */
 .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; }
@@ -365,7 +360,7 @@ footer {
 </nav>
 
 <div class="hero wrap" id="top">
-  <p class="caps hero-kicker">New York &amp; the Hudson Valley · Strategy · New ventures · Product</p>
+  <p class="caps hero-kicker"><span class="k-place">New York &amp; the Hudson Valley</span> · Strategy · New ventures · Product</p>
   <h1>Growing companies rarely need more effort, but they often need a better <span class="squig">angle<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2,6 Q22,2 44,6 T98,5"/></svg></span></h1>
   <p class="hero-sub">That's been my work twice over now. Global macro investing at Wellington and Point72, then at OuiSi, a company I built from an idea about human connection. Now, I'd like to work on new, meaningful problems.</p>
 </div>
@@ -399,17 +394,6 @@ footer {
     </div>
   </div>
   <p class="moves-note">Teams rarely lack effort, but they may be forcing things from the wrong perspective.</p>
-</div>
-
-<div class="sec sec-rule wrap">
-  <div class="sec-head">
-    <h2 class="sec-title">What you're left with.</h2>
-  </div>
-  <div class="outcomes">
-    <div class="outcome"><b>A deeper self-awareness</b> as it relates to the company.</div>
-    <div class="outcome"><b>A new understanding of, and approach to, a problem.</b></div>
-    <div class="outcome"><b>A revitalized sense of creativity and purpose.</b></div>
-  </div>
 </div>
 
 <div class="sec sec-rule wrap">
@@ -543,15 +527,6 @@ footer {
   </div>
 </div>
 
-<div class="sec sec-rule wrap why">
-  <div class="sec-head">
-    <h2 class="sec-title">Where that comes from.</h2>
-  </div>
-  <p>The thread through all of it is connection. Making connections, finding connections, noticing connections.</p>
-  <p>In markets that meant creative manipulation of data that no one thought to put side by side. At OuiSi it meant building something that fosters connectedness: with the world around us, with each other, with our inner selves.</p>
-  <p>Now, it's addressing problems that require a fresh angle, human understanding, curiosity and flexibility. Between ideas that don't obviously belong together, between people, between digital and physical.</p>
-</div>
-
 <div class="contact sec-rule wrap">
   <h2>Deep inside a problem? I'd like to hear about it.</h2>
   <p>Part or full-time for the right mission, and/or fractional alongside. Send a short note: what you're building, and where it's stuck.</p>
@@ -588,11 +563,6 @@ That's been my work twice over now. Global macro investing at Wellington and Poi
 3. **Create.** Then I help build it, whether that's coming up with ideas, making products, running a P&L, or negotiating partnerships.
 
 Teams rarely lack effort, but they may be forcing things from the wrong perspective.
-
-## What you're left with
-- A deeper self-awareness as it relates to the company.
-- A new understanding of, and approach to, a problem.
-- A revitalized sense of creativity and purpose.
 
 ## Where I'm most useful
 - A company with traction that's lost the thread. I help discover how it should evolve, often by getting back to the "why" behind it.
