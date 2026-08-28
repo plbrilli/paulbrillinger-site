@@ -202,6 +202,15 @@ h1 {
    another rule; 2px is reserved for section boundaries alone */
 
 /* contact */
+/* closing teasers — a lighter register than the sections above, so the page
+   ends on a person rather than a pitch. Group labels do the work of a heading. */
+.tgroup + .tgroup { margin-top: 36px; }
+.tgroup .caps { color: var(--copper); display: block; margin-bottom: 12px; }
+.tease { font-size: 17px; color: var(--ink2); line-height: 1.72; max-width: 660px; }
+.tease + .tease { margin-top: 5px; }
+.tease a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--copper); }
+.tease a:hover { color: var(--copper); }
+
 /* contact — the closing bookend, centred to match the hero */
 .contact { padding-top: 96px; padding-bottom: 110px; text-align: center; }
 .contact h2 {
@@ -289,6 +298,7 @@ footer {
   .use p { font-size: 15px; line-height: 1.58; }
   .useful { margin-bottom: 32px; }
 
+  .tease { font-size: 15.5px; }
   .contact { padding-top: 62px; padding-bottom: 72px; }
   .contact h2 { font-size: 27px; line-height: 1.2; }
   .contact p { font-size: 15.5px; margin-bottom: 30px; }
@@ -305,6 +315,7 @@ footer {
   .jyr  { font-size: 36px; }
   .jlbl-x { transform: translate(0, 0); }
 
+  .tease { font-size: 15.5px; }
   .contact { padding-top: 62px; padding-bottom: 72px; }
 
   .nav-name { font-size: 16px; }
@@ -496,6 +507,24 @@ footer {
   </div>
 </div>
 
+<div class="sec sec-rule wrap teasers">
+  <div class="tgroup">
+    <span class="caps">What I'm building</span>
+    <p class="tease">…Furmath, a creative and mathletic game of balancing equations</p>
+    <p class="tease">…OuiSi Daily and OuiSi Photologue, digital versions of the physical game</p>
+    <p class="tease">…a piano, slowly becoming a bookshelf</p>
+  </div>
+  <div class="tgroup">
+    <span class="caps">Things I've written</span>
+    <p class="tease">…<a href="https://medium.com/@paulbrillinger/shining-moonlight-on-imdb-416a35adaf43" target="_blank" rel="noopener">Shining Moonlight on IMDb</a>, on why a Best Picture winner's rating collapsed the week it won</p>
+  </div>
+  <div class="tgroup">
+    <span class="caps">Things I'm learning</span>
+    <p class="tease">…Brazilian jiu-jitsu, a year in, where the angle always beats more effort</p>
+    <p class="tease">…<a href="https://www.ecstaticmysticism.com/" target="_blank" rel="noopener">Ecstatic Mysticism</a>, a training in transpersonal psychology and mystical experience</p>
+  </div>
+</div>
+
 <div class="contact sec-rule wrap">
   <h2>Deep inside a problem? I'd like to hear about it.</h2>
   <p>Part or full-time for the right mission, and/or fractional alongside. Send a short note: what you're building, and where it's stuck.</p>
@@ -559,6 +588,19 @@ Market-maker for the Canadian Government Bond market (5–30 year maturities), m
 ## Education
 - MMF Mathematical Finance, University of Toronto (2002–2003, largely alongside the trading desk at Deutsche Bank)
 - BMath Actuarial Science, University of Waterloo (1996–2001)
+
+## What I'm building
+- Furmath, a creative and mathletic game of balancing equations
+- OuiSi Daily and OuiSi Photologue, digital versions of the physical game
+- A piano, slowly becoming a bookshelf
+
+## Things I've written
+- Shining Moonlight on IMDb, on why a Best Picture winner's rating collapsed the week it won
+  https://medium.com/@paulbrillinger/shining-moonlight-on-imdb-416a35adaf43
+
+## Things I'm learning
+- Brazilian jiu-jitsu, a year in, where the angle always beats more effort
+- Ecstatic Mysticism, a training in transpersonal psychology and mystical experience
 `;
   try {
     await navigator.clipboard.writeText(md);
