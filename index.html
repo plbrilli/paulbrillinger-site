@@ -217,8 +217,8 @@ h1 {
 /* contact */
 /* closing teasers — a lighter register than the sections above, so the page
    ends on a person rather than a pitch. Group labels do the work of a heading. */
-.tgroup + .tgroup { margin-top: 42px; }
-.tgroup .caps { color: var(--copper); display: block; margin-bottom: 12px; }
+.tgroup + .tgroup { margin-top: 46px; }
+.tgroup .sec-title { margin-bottom: 16px; }
 .tease { font-size: 17px; color: var(--ink2); line-height: 1.6; max-width: 660px; }
 .tease + .tease { margin-top: 14px; }
 .tease a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--copper); }
@@ -252,22 +252,6 @@ footer {
   padding: 28px 48px; text-align: center;
   font-style: italic; font-size: 15px; color: var(--ink2);
 }
-.md-link {
-  background: none; border: none; cursor: pointer;
-  font: inherit; color: var(--ink2);
-  border-bottom: 1px solid var(--hair);
-  padding: 0 0 1px; margin-left: 14px;
-}
-.md-link:hover { color: var(--copper); border-color: var(--copper); }
-#toast {
-  position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(12px);
-  background: var(--ink); color: var(--paper);
-  padding: 9px 22px; border-radius: 999px;
-  font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600;
-  opacity: 0; pointer-events: none; z-index: 200;
-  transition: opacity .25s, transform .25s;
-}
-#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 @media (max-width: 820px) {
   .wrap { padding-left: 26px; padding-right: 26px; }
@@ -336,7 +320,6 @@ footer {
   .nav-right { gap: 14px; }
   .nav-link { font-size: 10px; letter-spacing: 0.14em; }
   footer { padding: 24px 22px; font-size: 13.5px; }
-  .md-link { display: block; margin: 8px auto 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -524,17 +507,17 @@ footer {
 
 <div class="sec sec-rule wrap teasers">
   <div class="tgroup">
-    <span class="caps">What I'm building</span>
+    <h2 class="sec-title">What I'm building.</h2>
     <p class="tease">…<a href="https://furmath.com" target="_blank" rel="noopener">Furmath</a>, a creative and mathletic game of balancing equations</p>
     <p class="tease">…<a href="https://playouisi.com" target="_blank" rel="noopener">OuiSi Daily and OuiSi Photologue</a>, digital versions of the physical game</p>
     <p class="tease">…a bookshelf, made from an old piano shell</p>
   </div>
   <div class="tgroup">
-    <span class="caps">Things I've written</span>
+    <h2 class="sec-title">Things I've written.</h2>
     <p class="tease">…<a href="https://medium.com/@paulbrillinger/shining-moonlight-on-imdb-416a35adaf43" target="_blank" rel="noopener">Shining Moonlight on IMDb</a>, on why a Best Picture winner's rating collapsed the week it won</p>
   </div>
   <div class="tgroup">
-    <span class="caps">Things I'm learning</span>
+    <h2 class="sec-title">Things I'm learning.</h2>
     <p class="tease">…Brazilian jiu jitsu: a year in, rediscovering that angle and distance beat force</p>
     <p class="tease">…about myself, through <a href="https://www.ecstaticmysticism.com/" target="_blank" rel="noopener">a program</a> on transpersonal psychology and mystical experience</p>
   </div>
@@ -550,8 +533,7 @@ footer {
   </div>
 </div>
 
-<footer>Paul Brillinger · New York &amp; the Hudson Valley · <button class="md-link" id="copymd" title="Copy this page as a Markdown resume">copy as markdown</button></footer>
-<div id="toast">Copied as Markdown</div>
+<footer>Paul Brillinger · New York &amp; the Hudson Valley</footer>
 
 <script>
 const root = document.documentElement;
@@ -561,72 +543,7 @@ document.getElementById('tbtn').addEventListener('click', () => {
   root.setAttribute('data-theme', theme);
 });
 
-document.getElementById('copymd').addEventListener('click', async () => {
-  const md = `# Paul Brillinger
-New York & the Hudson Valley · paul@ouisi.co · linkedin.com/in/paul-brillinger
 
-*Growing companies rarely need more effort, but they often need a better angle.*
-
-That's been my work twice over now. Global macro investing at Wellington and Point72, then at OuiSi, a company I built from an idea about human connection. Now, I'd like to work on new, meaningful problems.
-
-## How I work
-
-1. **Listen.** I work with people, from teammates to customers, to understand their needs and ways of working.
-2. **Analyze.** I use my analytical and creative background to help find a new angle on existing or new efforts.
-3. **Create.** Then I help build it, from ideas through to scaling.
-
-## Where I'm most useful
-- A company with traction that's lost the thread.
-- A product that needs inventing, not just specifying.
-- A founder carrying too much alone.
-
-## Experience
-
-### Founder & CEO, OuiSi Inc. (2015–now, Brooklyn)
-Disconnection, from each other and our environment, is the defining problem of our time, and OuiSi approaches this problem creatively. OuiSi is a physical-meets-digital product platform that fosters creativity, curiosity and connection. Built through partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount. $15M LTD revenue, 500K units sold, 250K homes and classrooms; used in classrooms and memory care centers. The company continues today, restructured and leaner by design. While it's no longer a full-time job, I'm using free time to expand OuiSi's digital footprint at home, in the classroom and in therapeutic settings.
-
-### Participant, Inaugural Cohort, THNK School of Creative Leadership (2015, Vancouver)
-Program for creative leaders working on solutions to societal challenges. It bridged markets and founding OuiSi.
-
-### Portfolio Manager, Point72 Asset Management (2010–2014, New York)
-Systematic global macro in interest rates and FX. The creative work was in the data: reading it in novel ways, pulling in approaches that looked unrelated until they weren't. Top three global macro PMs at the firm by Sharpe ratio.
-
-### Portfolio Manager, Wellington Management (2006–2010, Boston)
-Helped build and run Wellington's most successful systematic investment platform. Member of the Global Macro Risk Management Committee.
-
-### Portfolio Manager, FairLane Asset Management (2003–2006, Toronto)
-Junior partner of a startup hedge fund. Head of Risk Management and Head of Quantitative Analysis.
-
-### Bond Trader, Deutsche Bank (2001–2003, Toronto)
-Market-maker for the Canadian Government Bond market (5–30 year maturities), managing to a $10M/year P&L. Advised the Bank of Canada on market dynamics and liquidity.
-
-## Education
-- MMF Mathematical Finance, University of Toronto (2002–2003, largely alongside the trading desk at Deutsche Bank)
-- BMath Actuarial Science, University of Waterloo (1996–2001)
-
-## What I'm building
-- Furmath, a creative and mathletic game of balancing equations
-  https://furmath.com
-- OuiSi Daily and OuiSi Photologue, digital versions of the physical game
-  https://playouisi.com
-- A bookshelf, made from an old piano shell
-
-## Things I've written
-- Shining Moonlight on IMDb, on why a Best Picture winner's rating collapsed the week it won
-  https://medium.com/@paulbrillinger/shining-moonlight-on-imdb-416a35adaf43
-
-## Things I'm learning
-- Brazilian jiu jitsu: a year in, rediscovering that angle and distance beat force
-- About myself, through a program on transpersonal psychology and mystical experience
-  https://www.ecstaticmysticism.com/
-`;
-  try {
-    await navigator.clipboard.writeText(md);
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 1800);
-  } catch (e) { /* clipboard unavailable */ }
-});
 </script>
 
 </html>
