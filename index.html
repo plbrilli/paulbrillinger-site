@@ -55,6 +55,12 @@ p { text-wrap: pretty; }
 .jera{stroke:rgba(25,26,31,0.14);stroke-width:1.4;stroke-dasharray:1 7;stroke-linecap:round}
 .jyr{font-family:Baskerville,Georgia,serif;font-style:italic;font-size:18px;fill:#75726C}
 .journey svg{width:100%;height:auto;display:block}
+@media (max-width: 640px) {
+  /* header meta (place + email) is one flex row with a 30px gap; below ~430px
+     it exceeds the viewport, so let it wrap instead of pushing the page wide */
+  header > div { flex-wrap: wrap !important; row-gap: 12px !important; }
+  header > div > span:last-child { gap: 16px !important; flex-wrap: wrap !important; }
+}
 </style>
 
 <div style="background:#F7F5F1;color:#191A1F;font-family:Baskerville,'Baskerville Old Face',Georgia,'Times New Roman',serif;font-size:18px;line-height:1.62">
