@@ -1,405 +1,163 @@
 <!doctype html>
 <html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paul Brillinger</title>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://paulbrillinger.com/">
-<meta name="description" content="Growing companies rarely need more effort, but they often need a better angle. Strategy, new ventures and product. Global macro investing at Wellington and Point72, then founder and CEO of OuiSi.">
+<meta name="description" content="Growing companies rarely need more effort. They need a creative angle. Strategy, new ventures and product. Thirteen years investing institutional money, then founder and CEO of OuiSi.">
 <meta name="author" content="Paul Brillinger">
-<meta name="theme-color" content="#F7F5F1" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#17181C" media="(prefers-color-scheme: dark)">
-
+<meta name="theme-color" content="#F7F5F1">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="shortcut icon" href="/favicon.ico">
-
 <meta property="og:site_name" content="Paul Brillinger">
 <meta property="og:title" content="Paul Brillinger">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://paulbrillinger.com/">
 <meta property="og:image" content="https://paulbrillinger.com/og-image.png">
-<meta property="og:image:secure_url" content="https://paulbrillinger.com/og-image.png">
-<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Paul Brillinger. Growing companies rarely need more effort, but they often need a better angle.">
+<meta property="og:description" content="Growing companies rarely need more effort. They need a creative angle.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Paul Brillinger">
 <meta name="twitter:image" content="https://paulbrillinger.com/og-image.png">
-<meta property="og:description" content="Growing companies rarely need more effort, but they often need a better angle. Strategy, new ventures and product. Global macro investing at Wellington and Point72, then founder and CEO of OuiSi.">
-<meta name="twitter:description" content="Growing companies rarely need more effort, but they often need a better angle. Strategy, new ventures and product. Global macro investing at Wellington and Point72, then founder and CEO of OuiSi.">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paul Brillinger</title>
+<meta name="twitter:description" content="Growing companies rarely need more effort. They need a creative angle.">
+<meta property="og:image:secure_url" content="https://paulbrillinger.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Paul Brillinger. Growing companies rarely need more effort. They need a creative angle.">
 <style>
-/* ═══ LOOK A · MONOGRAPH — quality print, literary, one copper accent ═══ */
-:root {
-  --paper: #F7F5F1;
-  --ink: #191A1F;
-  --ink2: #75726C;
-  --copper: #A66A2C;
-  --rule: #191A1F;
-  --hair: rgba(25,26,31,0.14);
-  --fin: #52739F; --mak: #B5722F; --mis: #5E8A6E;
-  --fin-d: #3E5878; --mak-d: #8A5624; --mis-d: #476A54;
-  --lift: .22;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #17181C; --ink: #E8E4DC; --ink2: #93908A;
-    --copper: #C98F4E; --rule: #E8E4DC; --hair: rgba(232,228,220,0.16);
-    --fin: #7A99C4; --mak: #CE8B48; --mis: #7FAC8D;
-    --fin-d: #556F92; --mak-d: #9A6533; --mis-d: #5B8267;
-    --lift: .5;
-  }
-}
-:root[data-theme="light"] {
-  --paper: #F7F5F1; --ink: #191A1F; --ink2: #75726C;
-  --copper: #A66A2C; --rule: #191A1F; --hair: rgba(25,26,31,0.14);
-  --fin: #52739F; --mak: #B5722F; --mis: #5E8A6E;
-  --fin-d: #3E5878; --mak-d: #8A5624; --mis-d: #476A54;
-  --lift: .22;
-}
-:root[data-theme="dark"] {
-  --paper: #17181C; --ink: #E8E4DC; --ink2: #93908A;
-  --copper: #C98F4E; --rule: #E8E4DC; --hair: rgba(232,228,220,0.16);
-  --fin: #7A99C4; --mak: #CE8B48; --mis: #7FAC8D;
-  --fin-d: #556F92; --mak-d: #9A6533; --mis-d: #5B8267;
-  --lift: .5;
-}
-*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+body { margin:0; background:#F7F5F1; }
+a { color:#191A1F; text-decoration:none; }
+a:hover { color:#A66A2C; }
 p { text-wrap: pretty; }
-body {
-  background: var(--paper); color: var(--ink);
-  font-family: Baskerville, "Baskerville Old Face", Georgia, "Times New Roman", serif;
-  font-size: 18px; line-height: 1.65;
-}
-.caps {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 10.5px; font-weight: 600; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--ink2);
-}
-/* horizontal padding only — never use the shorthand here, or it will
-   wipe out the vertical padding of any section that also carries .wrap */
-.wrap { max-width: 960px; margin: 0 auto; padding-left: 48px; padding-right: 48px; }
-
-/* nav */
-nav {
-  position: fixed; inset: 0 0 auto 0; z-index: 50;
-  background: color-mix(in srgb, var(--paper) 90%, transparent);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--hair);
-}
-.nav-in {
-  max-width: 960px; margin: 0 auto; padding: 0 48px;
-  height: 58px; display: flex; align-items: center; justify-content: space-between;
-}
-.nav-name { font-style: italic; font-size: 19px; letter-spacing: 0.01em; }
-.nav-right { display: flex; align-items: center; gap: 22px; }
-.nav-link {
-  font-family: system-ui, sans-serif; font-size: 11px; font-weight: 600;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--ink); text-decoration: none;
-  border-bottom: 1px solid var(--copper);
-  padding-bottom: 2px;
-}
-.nav-link:hover { color: var(--copper); }
-.theme-btn { background: none; border: none; cursor: pointer; color: var(--ink2); font-size: 16px; }
-
-/* hero — centred bookend; the body below is ranged left, and the rules
-   between them make the shift deliberate rather than accidental */
-.hero { padding-top: 168px; padding-bottom: 64px; text-align: center; }
-/* the work reads in the accent; the place sits back so it does not compete */
-.hero-kicker { color: var(--copper); margin-bottom: 34px; }
-.hero-kicker .k-place { color: var(--ink2); }
-.hero-kicker .k-work { white-space: nowrap; }
-/* sized so the two lines both sit inside the text column with visible margin.
-   at 70px/860px the longer line ran the full column width and read as overflow. */
-h1 {
-  font-size: clamp(36px, 5.1vw, 62px);
-  font-weight: 400; font-style: italic;
-  line-height: 1.12; letter-spacing: -0.018em;
-  text-wrap: balance;
-  max-width: 800px;
-  margin: 0 auto 34px;
-}
-.squig { position: relative; white-space: nowrap; }
-.squig svg {
-  position: absolute; left: 0.04em; bottom: -0.14em; width: 96%; height: 0.3em;
-  overflow: visible;
-}
-.squig svg path {
-  fill: none; stroke: var(--copper); stroke-width: 4;
-  stroke-linecap: round; vector-effect: non-scaling-stroke;
-}
-.hero-sub { font-size: 20px; color: var(--ink2); max-width: 620px; line-height: 1.7; margin: 0 auto; }
-
-/* journey */
-/* nested inside "My path" — the section supplies the top space */
-.journey { padding-top: 0; padding-bottom: 56px; }
-.journey svg { width: 100%; height: auto; display: block; }
-/* threads: flat colour on top of a slightly darker bevel, so each band reads
-   as a solid object rather than a line */
-.rib-f  { fill: var(--fin);   } .rib-fd { fill: var(--fin-d); }
-.rib-m  { fill: var(--mak);   } .rib-md { fill: var(--mak-d); }
-.rib-x  { fill: var(--mis);   } .rib-xd { fill: var(--mis-d); }
-#lift feDropShadow { flood-opacity: var(--lift); }
-.jlbl { font-family: system-ui, sans-serif; font-size: 10.5px; font-weight: 600; letter-spacing: 0.2em; }
-.jlbl-f { fill: var(--fin); } .jlbl-m { fill: var(--mak); } .jlbl-x { fill: var(--mis); }
-.jera { stroke: var(--hair); stroke-width: 1.4; stroke-dasharray: 1 7; stroke-linecap: round; }
-.jyr { font-family: Baskerville, Georgia, serif; font-style: italic; font-size: 18px; fill: var(--ink2); }
-
-/* sections */
-.sec { padding-top: 78px; padding-bottom: 78px; }
-/* the two moves, numbered because they genuinely happen in order */
-.moves { max-width: 720px; }
-.move { display: grid; grid-template-columns: 30px 1fr; gap: 20px; padding: 20px 0; }
-.move + .move { border-top: 1px solid var(--hair); }
-.move-n { font-style: italic; font-size: 22px; color: var(--copper); line-height: 1.1; }
-.move-t { font-size: 20px; font-weight: 600; margin-bottom: 6px; line-height: 1.32; }
-.move p { font-size: 17px; color: var(--ink2); line-height: 1.68; }
-
-
-
-.sec-rule { border-top: 2px solid var(--rule); }
-.sec-head { display: flex; align-items: baseline; gap: 26px; margin-bottom: 34px; }
-.sec-head .caps { flex-shrink: 0; }
-.sec-title { font-size: clamp(28px, 3.4vw, 40px); font-style: italic; font-weight: 400; }
-.sec-title, .use h3, .move-t, .entry h3, .contact h2 { text-wrap: balance; }
-
-
-/* experience — hanging years, deep hierarchy */
-.entry {
-  display: grid; grid-template-columns: 170px 1fr; gap: 40px;
-  padding: 34px 0;
-  border-top: 1px solid var(--hair);
-}
-/* :first-of-type would match .sec-head (also a div), never the entry —
-   target the entry that actually follows the heading */
-.sec-head + .entry, .journey + .entry { border-top: none; padding-top: 0; }
-.year {
-  font-style: italic; font-size: 27px; color: var(--copper);
-  line-height: 1.15; letter-spacing: -0.01em;
-}
-/* progressive disclosure on the long timeline entry. <details> natively hides
-   every non-summary child when closed, so the teaser sentence has to live in
-   the <summary> itself; the rest of the entry follows it. */
-.disc > summary { cursor: pointer; list-style: none; }
-.disc > summary::-webkit-details-marker { display: none; }
-.disc > summary::after {
-  content: 'Read more'; display: block; width: max-content; margin-top: 13px;
-  font-family: system-ui, sans-serif; font-size: 10.5px; font-weight: 600;
-  letter-spacing: 0.16em; text-transform: uppercase; color: var(--copper);
-  border-bottom: 1px solid var(--copper); padding-bottom: 2px;
-}
-.disc[open] > summary::after { content: 'Read less'; }
-
-.entry h3 { font-size: 22px; font-weight: 600; margin-bottom: 3px; }
-.co { font-size: 16px; color: var(--ink2); font-style: italic; margin-bottom: 12px; }
-.entry .body { font-size: 16.5px; color: var(--ink2); line-height: 1.7; max-width: 580px; }
-.entry .body + .body { margin-top: 15px; }
-.figures { display: flex; gap: 36px; margin-top: 18px; }
-.fig-v { font-size: 24px; font-style: italic; color: var(--ink); }
-.fig-l { font-family: system-ui, sans-serif; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink2); margin-top: 4px; line-height: 1.45; }
-
-/* approach — where I'm useful */
-.useful { max-width: 740px; }
-.use {
-  padding: 24px 0;
-  border-top: 1px solid var(--hair);
-}
-.use:first-child { border-top: none; padding-top: 0; }
-.use h3 { font-size: 20px; font-weight: 600; margin-bottom: 6px; line-height: 1.32; }
-/* closing note — set apart by space and voice (italic, full ink), not by
-   another rule; 2px is reserved for section boundaries alone */
-
-/* contact */
-/* closing teasers — a lighter register than the sections above, so the page
-   ends on a person rather than a pitch. Group labels do the work of a heading. */
-.tgroup + .tgroup { margin-top: 46px; }
-.tgroup .sec-title { margin-bottom: 16px; }
-.tease { font-size: 17px; color: var(--ink2); line-height: 1.6; max-width: 660px; }
-.tease + .tease { margin-top: 14px; }
-.tease a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--copper); }
-.tease a:hover { color: var(--copper); }
-
-/* contact — the closing bookend, centred to match the hero */
-.contact { padding-top: 96px; padding-bottom: 110px; text-align: center; }
-.contact h2 {
-  font-size: clamp(30px, 4.2vw, 50px);
-  font-style: italic; font-weight: 400; line-height: 1.14;
-  text-wrap: balance; max-width: 680px; margin: 0 auto 20px;
-}
-.contact p { font-size: 17px; color: var(--ink2); max-width: 480px; margin: 0 auto 38px; }
-.write {
-  font-family: system-ui, sans-serif;
-  display: inline-block;
-  font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
-  color: #fff; text-decoration: none;
-  background: var(--copper);
-  padding: 16px 40px; border-radius: 999px;
-  box-shadow: 0 2px 6px rgba(25,26,31,0.12), 0 10px 26px rgba(166,106,44,0.22);
-  transition: transform .16s, box-shadow .16s;
-}
-.write:hover { transform: translateY(-2px) rotate(-1deg); box-shadow: 0 4px 10px rgba(25,26,31,0.14), 0 16px 36px rgba(166,106,44,0.28); }
-.clinks { margin-top: 30px; display: flex; gap: 30px; justify-content: center; }
-.clink { font-style: italic; font-size: 17px; color: var(--ink2); text-decoration: none; }
-.clink:hover { color: var(--copper); }
-
-footer {
-  border-top: 1px solid var(--hair);
-  padding: 28px 48px; text-align: center;
-  font-style: italic; font-size: 15px; color: var(--ink2);
+@media (max-width: 1010px) {
+  .r3 { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .r3 > * { grid-column: auto !important; }
+  .m2 { grid-template-columns: 1fr !important; gap: 2px !important; }
+  .lead { display: flex !important; flex-direction: column !important; gap: 26px !important; }
+  .lead > p { order: -1; }
+  .c3 { grid-template-columns: 1fr !important; }
+  .c3 > div { padding: 24px 0 !important; border-right: 0 !important; border-top: 1px solid rgba(25,26,31,0.16) !important; }
+  .c3 > div:first-child { padding-top: 0 !important; border-top: 0 !important; }
 }
 
-@media (max-width: 820px) {
-  .wrap { padding-left: 26px; padding-right: 26px; }
-  .nav-in { padding: 0 20px; }
-  .hero { padding-top: 128px; padding-bottom: 44px; }
-  .entry { grid-template-columns: 1fr; gap: 8px; }
-  .sec-head { flex-direction: column; gap: 8px; margin-bottom: 26px; }
-}
-
-/* ── phones: tighten the type scale; 18px Baskerville is far too large
-      on a ~390px viewport (≈6 words per line) ────────────────────── */
-@media (max-width: 560px) {
-  body { font-size: 16px; line-height: 1.6; }
-  .wrap { padding-left: 22px; padding-right: 22px; }
-
-  .hero { padding-top: 104px; padding-bottom: 32px; }
-  h1 { font-size: clamp(28px, 8.2vw, 36px); line-height: 1.16; margin-bottom: 26px; }
-  .hero-kicker { margin-bottom: 24px; letter-spacing: 0.14em; }
-  /* two deliberate lines instead of a separator orphaning the last word */
-  .hero-kicker .k-sep { display: none; }
-  .hero-kicker .k-work { display: block; margin-top: 7px; }
-  .caps { font-size: 10px; }
-  .hero-sub { font-size: 16.5px; line-height: 1.62; }
-
-  .journey { padding-top: 22px; padding-bottom: 40px; }
-
-  .sec { padding-top: 46px; padding-bottom: 46px; }
-  .move { grid-template-columns: 24px 1fr; gap: 14px; }
-  .move p { font-size: 16px; }
-  .sec-head { margin-bottom: 22px; }
-  .sec-title { font-size: 25px; line-height: 1.25; }
-
-
-  .entry { padding-top: 26px; padding-bottom: 26px; }
-  .year { font-size: 20px; }
-  .entry h3 { font-size: 18.5px; line-height: 1.28; }
-  .co { font-size: 14.5px; margin-bottom: 10px; }
-  .entry .body { font-size: 15.5px; line-height: 1.6; }
-  .figures { gap: 22px; margin-top: 16px; }
-  .fig-v { font-size: 20px; }
-
-  .use { padding-top: 20px; padding-bottom: 20px; }
-  .use h3, .move-t { font-size: 17.5px; line-height: 1.3; }
-
-  .tease { font-size: 15.5px; }
-  .contact { padding-top: 62px; padding-bottom: 72px; }
-  .contact h2 { font-size: 27px; line-height: 1.2; }
-  .contact p { font-size: 15.5px; margin-bottom: 30px; }
-  /* full-width CTA on phones — a left-aligned pill leaves the row
-     looking stranded, and a wide tap target is better anyway */
-  .write { display: block; text-align: center; font-size: 11.5px; padding: 17px 24px; letter-spacing: 0.16em; }
-  .clinks { gap: 24px; margin-top: 26px; }
-  .clink { font-size: 15.5px; }
-
-  /* the diagram scales to ~0.36 at this width, so its labels must be
-     sized in viewBox units large enough to survive the reduction */
-  .jlbl { font-size: 28px; letter-spacing: 2.4px; }
-  /* Baskerville italic reads small; the years need more than the sans labels */
-  .jyr  { font-size: 36px; }
-  .jlbl-x { transform: translate(0, 0); }
-
-  .tease { font-size: 15.5px; }
-  .contact { padding-top: 62px; padding-bottom: 72px; }
-
-  .nav-name { font-size: 16px; }
-  .nav-right { gap: 14px; }
-  .nav-link { font-size: 10px; letter-spacing: 0.14em; }
-  footer { padding: 24px 22px; font-size: 13.5px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { transition: none !important; }
-}
+/* career ribbons, ported from v1 with literal light-mode colours */
+.rib-f{fill:#52739F}.rib-fd{fill:#3E5878}
+.rib-m{fill:#B5722F}.rib-md{fill:#8A5624}
+.rib-x{fill:#5E8A6E}.rib-xd{fill:#476A54}
+#lift feDropShadow{flood-opacity:.22}
+.jlbl{font-family:Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.2em}
+.jlbl-f{fill:#52739F}.jlbl-m{fill:#B5722F}.jlbl-x{fill:#5E8A6E}
+.jera{stroke:rgba(25,26,31,0.14);stroke-width:1.4;stroke-dasharray:1 7;stroke-linecap:round}
+.jyr{font-family:Baskerville,Georgia,serif;font-style:italic;font-size:18px;fill:#75726C}
+.journey svg{width:100%;height:auto;display:block}
 </style>
 
-<nav>
-  <div class="nav-in">
-    <span class="nav-name">Paul Brillinger</span>
-    <div class="nav-right">
-      <a class="nav-link" href="mailto:paul@ouisi.co">Write to me</a>
-      <button class="theme-btn" id="tbtn" aria-label="Toggle theme">◐</button>
+<div style="background:#F7F5F1;color:#191A1F;font-family:Baskerville,'Baskerville Old Face',Georgia,'Times New Roman',serif;font-size:18px;line-height:1.62">
+
+  <header style="border-bottom:1px solid rgba(25,26,31,0.16)">
+    <div style="max-width:1440px;margin:0 auto;padding:22px clamp(24px,5vw,72px);display:flex;align-items:baseline;justify-content:space-between">
+      <span style="font-style:italic;font-size:20px;letter-spacing:0.005em">Paul Brillinger</span>
+      <span style="display:flex;align-items:baseline;gap:30px;font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C"><span>New York & the Hudson Valley</span><a href="mailto:paul.brillinger@gmail.com" style="color:#191A1F;border-bottom:1px solid #A66A2C;padding-bottom:3px">paul.brillinger@gmail.com</a></span>
     </div>
+  </header>
+
+  <div class="r3" style="max-width:1440px;margin:0 auto;padding:112px clamp(24px,5vw,72px) 0;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
+    <p style="font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#75726C;margin:14px 0 0;line-height:1.9">Strategy<br>New ventures<br>Product</p>
+    <h1 style="grid-column:span 2;font-size:clamp(46px,6.8vw,98px);font-weight:400;font-style:italic;line-height:0.99;letter-spacing:-0.033em;margin:-0.17em 0 0">Growing companies rarely need more effort. They need a creative angle.</h1>
   </div>
-</nav>
 
-<div class="hero wrap" id="top">
-  <p class="caps hero-kicker"><span class="k-place">New York &amp; the Hudson Valley</span><span class="k-sep"> · </span><span class="k-work">Strategy · New ventures · Product</span></p>
-  <h1>Growing companies rarely need more effort, but they often need a better <span class="squig">angle<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2,6 Q22,2 44,6 T98,5"/></svg></span></h1>
-  <p class="hero-sub">That's been my work twice over now. Global macro investing at Wellington and Point72, then at OuiSi, a company I built from an idea about human connection. Now, I'd like to work on new, meaningful problems.</p>
-</div>
-
-
-<div class="sec sec-rule wrap">
-  <div class="sec-head">
-    <h2 class="sec-title">How I work.</h2>
-  </div>
-  <div class="moves">
-    <div class="move">
-      <div class="move-n">i.</div>
-      <div>
-        <h3 class="move-t">Listen</h3>
-        <p>I work with people, from teammates to customers, to understand their needs and ways of working.</p>
+  <div class="r3 lead" style="max-width:1440px;margin:0 auto;padding:52px clamp(24px,5vw,72px) 88px;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
+    <div>
+      <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:8px 0 14px">Currently</p>
+      <p style="font-size:16.5px;line-height:1.55;margin:0 0 9px">Full-time for the right mission, fractional alongside.</p>
+      <p style="font-size:16.5px;line-height:1.55;margin:0;color:#75726C">Between New York and the Hudson Valley. I answer every note.</p>
+    </div>
+    <p style="font-size:24px;line-height:1.5;margin:0">That's been my work twice over now. Thirteen years investing institutional money, then eleven building OuiSi, a company I made out of an idea about human connection. <span style="color:#75726C">Now I'd like a new problem. I'm most useful when what's stuck is the thinking, not the effort.</span></p>
+    <div>
+      <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:0 0 2px">Where I've worked</p>
+      <div style="display:flex;flex-direction:column">
+        <div style="padding:12px 0;border-top:1px solid rgba(25,26,31,0.16)">
+          <div style="font-style:italic;font-size:19px;line-height:1.15">OuiSi</div>
+          <div style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#75726C;margin-top:5px">Founder & CEO, eleven years</div>
+        </div>
+        <div style="padding:12px 0;border-top:1px solid rgba(25,26,31,0.16)">
+          <div style="font-style:italic;font-size:19px;line-height:1.15">Point72</div>
+          <div style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#75726C;margin-top:5px">Portfolio manager</div>
+        </div>
+        <div style="padding:12px 0;border-top:1px solid rgba(25,26,31,0.16)">
+          <div style="font-style:italic;font-size:19px;line-height:1.15">Wellington Management</div>
+          <div style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#75726C;margin-top:5px">Portfolio manager</div>
+        </div>
+        <div style="padding:12px 0;border-top:1px solid rgba(25,26,31,0.16);border-bottom:1px solid rgba(25,26,31,0.16)">
+          <div style="font-style:italic;font-size:19px;line-height:1.15">Deutsche Bank</div>
+          <div style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#75726C;margin-top:5px">Bond trader</div>
+        </div>
       </div>
     </div>
-    <div class="move">
-      <div class="move-n">ii.</div>
-      <div>
-        <h3 class="move-t">Analyze</h3>
-        <p>I use my analytical and creative background to help find a new angle on existing or new efforts.</p>
+  </div>
+
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(24px,5vw,72px)">
+    <div class="r3" style="border-top:2px solid #191A1F;padding-top:28px;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
+      <p style="font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:8px 0 0">How I work</p>
+      <div style="grid-column:span 2">
+        <div class="m2" style="display:grid;grid-template-columns:clamp(104px,12vw,170px) minmax(0,1fr);gap:clamp(18px,2vw,28px);align-items:baseline;padding-bottom:26px">
+          <span style="font-style:italic;font-size:32px;letter-spacing:-0.015em;line-height:1">Listen.</span>
+          <p style="margin:0;font-size:18.5px;line-height:1.58;color:#75726C">I work with people, from teammates to customers, to understand their needs and ways of working.</p>
+        </div>
+        <div class="m2" style="display:grid;grid-template-columns:clamp(104px,12vw,170px) minmax(0,1fr);gap:clamp(18px,2vw,28px);align-items:baseline;padding-bottom:26px">
+          <span style="font-style:italic;font-size:32px;letter-spacing:-0.015em;line-height:1">Analyze.</span>
+          <p style="margin:0;font-size:18.5px;line-height:1.58;color:#75726C">I use my analytical and creative background to find a new angle on existing or new efforts.</p>
+        </div>
+        <div class="m2" style="display:grid;grid-template-columns:clamp(104px,12vw,170px) minmax(0,1fr);gap:clamp(18px,2vw,28px);align-items:baseline">
+          <span style="font-style:italic;font-size:32px;letter-spacing:-0.015em;line-height:1">Create.</span>
+          <p style="margin:0;font-size:18.5px;line-height:1.58;color:#75726C">Then I help build it, from ideas through to scaling.</p>
+        </div>
       </div>
     </div>
-    <div class="move">
-      <div class="move-n">iii.</div>
-      <div>
-        <h3 class="move-t">Create</h3>
-        <p>Then I help build it, from ideas through to scaling.</p>
+  </div>
+
+  <div style="max-width:1440px;margin:104px auto 0;padding:0 clamp(24px,5vw,72px)">
+    <div style="border-top:2px solid #191A1F;padding-top:28px">
+      <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);margin-bottom:52px">
+        <p style="font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:8px 0 0">Where I'm useful</p>
+        <h2 style="grid-column:span 2;font-size:clamp(28px,3.2vw,46px);font-style:italic;font-weight:400;line-height:1.08;letter-spacing:-0.022em;margin:-0.1em 0 0">Three situations I've been inside, not adjacent to.</h2>
+      </div>
+      <div class="c3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0">
+        <div style="padding:0 48px 0 0;border-right:1px solid rgba(25,26,31,0.16)">
+          <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#75726C;margin:0 0 16px">One</p>
+          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0 0 14px">A company that has lost its why.</p>
+          <p style="font-size:16.5px;line-height:1.6;color:#75726C;margin:0">Everyone is busy and the numbers look fine, but nobody can say what it's all for. I help you put the why back into words, then make the hard choices from it.</p>
+        </div>
+        <div style="padding:0 48px;border-right:1px solid rgba(25,26,31,0.16)">
+          <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#75726C;margin:0 0 16px">Two</p>
+          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0 0 14px">A product that needs inventing.</p>
+          <p style="font-size:16.5px;line-height:1.6;color:#75726C;margin:0">Not a spec to write but a thing that doesn't exist yet. OuiSi began as an idea about attention and reached a quarter-million homes.</p>
+        </div>
+        <div style="padding:0 0 0 48px">
+          <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#75726C;margin:0 0 16px">Three</p>
+          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0 0 14px">A founder carrying too much alone.</p>
+          <p style="font-size:16.5px;line-height:1.6;color:#75726C;margin:0">I've been the last stop on every decision for eleven years. I take half of them off your desk and give back judgment, not just capacity.</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="sec sec-rule wrap">
-  <div class="sec-head">
-    <h2 class="sec-title">Where I'm most useful.</h2>
-  </div>
-  <div class="useful">
-    <div class="use">
-      <h3>A company with traction that's lost the thread.</h3>
-    </div>
-    <div class="use">
-      <h3>A product that needs inventing, not just specifying.</h3>
-    </div>
-    <div class="use">
-      <h3>A venture requiring both the prototype and the spreadsheets.</h3>
-    </div>
-    <div class="use">
-      <h3>A founder carrying too much alone.</h3>
-    </div>
-  </div>
-</div>
+  <div style="max-width:1440px;margin:104px auto 0;padding:0 clamp(24px,5vw,72px)">
+    <div style="border-top:2px solid #191A1F;padding-top:28px">
+      <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);margin-bottom:46px">
+        <p style="font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:8px 0 0">My path</p>
+        <h2 style="grid-column:span 2;font-size:clamp(28px,3.2vw,46px);font-style:italic;font-weight:400;line-height:1.08;letter-spacing:-0.022em;margin:-0.1em 0 0">Thirteen years pricing risk, eleven building a company.</h2>
+      </div>
 
-<div class="sec sec-rule wrap">
-  <div class="sec-head">
-    <h2 class="sec-title">My path.</h2>
-  </div>
-
-  <div class="journey">
-    <svg id="jsvg" viewBox="0 0 920 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A career flow diagram: analyzing and creating run as separate threads through the markets years, converge at OuiSi in 2015, are joined by a connecting thread, and braid into one band at the present.">
+      <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);margin-bottom:44px">
+        <div></div>
+      <div class="journey" style="grid-column:span 2;margin-bottom:14px">
+        <svg id="jsvg" viewBox="0 0 920 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A career flow diagram: analyzing and creating run as separate threads through the markets years, converge at OuiSi in 2015, are joined by a connecting thread, and braid into one band at the present.">
       <defs>
         <filter id="lift" x="-20%" y="-20%" width="150%" height="150%">
           <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#000"/>
@@ -433,120 +191,116 @@ footer {
       <text class="jlbl jlbl-m" x="227" y="212" text-anchor="end">CREATIVITY</text>
       <text class="jlbl jlbl-x" x="464" y="274" text-anchor="end">CONNECTION</text>
     </svg>
-  </div>
+      </div>
+      </div>
 
-  <div class="entry">
-    <div class="year">Since 2015</div>
-    <div>
-      <h3>Founder &amp; CEO</h3>
-      <p class="co">OuiSi Inc., Brooklyn</p>
-      <details class="disc">
-        <summary class="body">Disconnection, from each other and our environment, is the defining problem of our time, and OuiSi approaches this problem creatively.</summary>
-        <p class="body">OuiSi is a physical-meets-digital product platform that fosters creativity, curiosity and connection. Built through partnerships with the Getty, Boston MFA, the Smithsonian, and Paramount, OuiSi lives in homes, classrooms, and memory care centers across the country.</p>
-      <p class="body">The company continues today, restructured and leaner by design. While it's no longer a full-time job, I'm using free time to expand OuiSi's digital footprint at home, in the classroom and in therapeutic settings.</p>
-      <div class="figures">
-        <div><div class="fig-v">$15M</div><div class="fig-l">LTD Revenue</div></div>
-        <div><div class="fig-v">500K</div><div class="fig-l">Units Sold</div></div>
-        <div><div class="fig-v">250K</div><div class="fig-l">Homes and<br>Classrooms</div></div>
+      <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);padding:0 0 32px;border-top:1px solid rgba(25,26,31,0.16);padding-top:32px">
+        <div style="font-style:italic;font-size:27px;color:#A66A2C;line-height:1.05;letter-spacing:-0.012em">Since 2015</div>
+        <div>
+          <h3 style="font-size:23px;font-weight:600;margin:0 0 2px;letter-spacing:-0.005em">Founder & CEO</h3>
+          <p style="font-size:15.5px;font-style:italic;color:#75726C;margin:0 0 14px">OuiSi Inc., Brooklyn</p>
+          <p style="font-size:16.5px;line-height:1.65;color:#75726C;margin:0;max-width:600px">Disconnection, from each other and our environment, is the defining problem of our time, and OuiSi approaches it creatively: a physical-meets-digital platform that lives in homes, classrooms and memory-care centers. It continues today, restructured and leaner by design.</p>
         </div>
-      </details>
+        <p style="font-size:17.5px;font-style:italic;line-height:1.45;letter-spacing:-0.005em;margin:5px 0 0">Built to $15M of revenue from nothing, and into a quarter-million homes and classrooms.</p>
+      </div>
+
+      <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);padding:32px 0;border-top:1px solid rgba(25,26,31,0.16)">
+        <div style="font-style:italic;font-size:27px;color:#A66A2C;line-height:1.05;letter-spacing:-0.012em">2015</div>
+        <div>
+          <h3 style="font-size:23px;font-weight:600;margin:0 0 2px;letter-spacing:-0.005em">Participant, Inaugural Cohort</h3>
+          <p style="font-size:15.5px;font-style:italic;color:#75726C;margin:0 0 14px">THNK School of Creative Leadership, Vancouver</p>
+          <p style="font-size:16.5px;line-height:1.65;color:#75726C;margin:0;max-width:600px">A program for creative leaders working on societal challenges. Part think tank, part accelerator, and the one deliberate pause in twenty-five years.</p>
+        </div>
+        <p style="font-size:17.5px;font-style:italic;line-height:1.45;letter-spacing:-0.005em;margin:5px 0 0">The bridge between the markets career and founding OuiSi.</p>
+      </div>
+
+      <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);padding:32px 0;border-top:1px solid rgba(25,26,31,0.16)">
+        <div style="font-style:italic;font-size:27px;color:#A66A2C;line-height:1.05;letter-spacing:-0.012em">2010–14</div>
+        <div>
+          <h3 style="font-size:23px;font-weight:600;margin:0 0 2px;letter-spacing:-0.005em">Portfolio Manager</h3>
+          <p style="font-size:15.5px;font-style:italic;color:#75726C;margin:0 0 14px">Point72 Asset Management, New York</p>
+          <p style="font-size:16.5px;line-height:1.65;color:#75726C;margin:0;max-width:600px">Ran a book in interest rates and currencies, decided by models rather than hunches. The creative work was in the data: reading it in ways nobody else was, borrowing methods that looked unrelated until they weren't.</p>
+        </div>
+        <p style="font-size:17.5px;font-style:italic;line-height:1.45;letter-spacing:-0.005em;margin:5px 0 0">One of the top three performers among the firm's global macro managers, per dollar of risk taken.</p>
+      </div>
+
+      <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);padding:32px 0;border-top:1px solid rgba(25,26,31,0.16)">
+        <div style="font-style:italic;font-size:27px;color:#A66A2C;line-height:1.05;letter-spacing:-0.012em">2006–10</div>
+        <div>
+          <h3 style="font-size:23px;font-weight:600;margin:0 0 2px;letter-spacing:-0.005em">Portfolio Manager</h3>
+          <p style="font-size:15.5px;font-style:italic;color:#75726C;margin:0 0 14px">Wellington Management, Boston</p>
+          <p style="font-size:16.5px;line-height:1.65;color:#75726C;margin:0;max-width:600px">Helped build and run Wellington's most successful model-driven investment business. Sat on the committee that reviewed the firm's global macro teams: how they were doing, who should get more capital, and what nobody had accounted for.</p>
+        </div>
+        <p style="font-size:17.5px;font-style:italic;line-height:1.45;letter-spacing:-0.005em;margin:5px 0 0">The business I helped build is still running. Observing other managers for a living taught me to spot trouble early.</p>
+      </div>
+
+      <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);padding:32px 0;border-top:1px solid rgba(25,26,31,0.16)">
+        <div style="font-style:italic;font-size:27px;color:#A66A2C;line-height:1.05;letter-spacing:-0.012em">2001–06</div>
+        <div>
+          <h3 style="font-size:23px;font-weight:600;margin:0 0 2px;letter-spacing:-0.005em">Bond Trader, then Junior Partner</h3>
+          <p style="font-size:15.5px;font-style:italic;color:#75726C;margin:0 0 14px">Deutsche Bank · FairLane Asset Management, Toronto</p>
+          <p style="font-size:16.5px;line-height:1.65;color:#75726C;margin:0;max-width:600px">Quoted prices in Canadian government bonds all day, every maturity, where being wrong is immediate and public. Then head of risk and quantitative analysis at a startup hedge fund.</p>
+        </div>
+        <p style="font-size:17.5px;font-style:italic;line-height:1.45;letter-spacing:-0.005em;margin:5px 0 0">Ran a book earning about $10M a year.</p>
+      </div>
+
+      <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);padding:32px 0 0;border-top:1px solid rgba(25,26,31,0.16)">
+        <div style="font-style:italic;font-size:27px;color:#A66A2C;line-height:1.05;letter-spacing:-0.012em">Education</div>
+        <div>
+          <h3 style="font-size:23px;font-weight:600;margin:0 0 2px;letter-spacing:-0.005em">BMath Actuarial Science · MMF Mathematical Finance</h3>
+          <p style="font-size:15.5px;font-style:italic;color:#75726C;margin:0 0 14px">University of Waterloo (1996–2001) · University of Toronto (2002–03)</p>
+          <p style="font-size:16.5px;line-height:1.65;color:#75726C;margin:0;max-width:600px">The maths behind model-driven investing, and the habit of taking a problem apart before answering it.</p>
+        </div>
+        <p style="font-size:17.5px;font-style:italic;line-height:1.45;letter-spacing:-0.005em;margin:5px 0 0">Most of the MMF ran alongside full days on the trading desk.</p>
+      </div>
     </div>
   </div>
 
-  <div class="entry">
-    <div class="year">2015</div>
-    <div>
-      <h3>Participant, Inaugural Cohort</h3>
-      <p class="co">THNK School of Creative Leadership, Vancouver</p>
-      <p class="body">A program for creative leaders working on solutions to societal challenges. Part think tank, part accelerator. It bridged my markets career and founding OuiSi.</p>
+  <div style="max-width:1440px;margin:104px auto 0;padding:0 clamp(24px,5vw,72px)">
+    <div class="c3" style="border-top:2px solid #191A1F;padding-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:0">
+      <div style="padding:0 48px 0 0;border-right:1px solid rgba(25,26,31,0.16)">
+        <p style="font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:0 0 20px">What I'm building</p>
+        <p style="font-size:17px;line-height:1.55;color:#75726C;margin:0 0 13px"><a href="https://furmath.com" target="_blank" rel="noopener" style="border-bottom:1px solid #A66A2C">Furmath</a>, a creative and mathletic game of balancing equations</p>
+        <p style="font-size:17px;line-height:1.55;color:#75726C;margin:0 0 13px"><a href="https://playouisi.com" target="_blank" rel="noopener" style="border-bottom:1px solid #A66A2C">OuiSi Daily and Photologue</a>, digital versions of the physical game</p>
+        <p style="font-size:17px;line-height:1.55;color:#75726C;margin:0">A bookshelf, made from an old piano shell</p>
+      </div>
+      <div style="padding:0 48px;border-right:1px solid rgba(25,26,31,0.16)">
+        <p style="font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:0 0 20px">Things I'm learning</p>
+        <p style="font-size:17px;line-height:1.55;color:#75726C;margin:0 0 13px">Brazilian jiu jitsu: a year in, rediscovering that angle and distance beat force</p>
+        <p style="font-size:17px;line-height:1.55;color:#75726C;margin:0">About myself, through <a href="https://www.ecstaticmysticism.com/" target="_blank" rel="noopener" style="border-bottom:1px solid #A66A2C">a program</a> on transpersonal psychology and mystical experience</p>
+      </div>
+      <div style="padding:0 0 0 48px">
+        <p style="font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:0 0 20px">Things I've written</p>
+        <p style="font-size:17px;line-height:1.55;color:#75726C;margin:0"><a href="https://medium.com/@paulbrillinger/shining-moonlight-on-imdb-416a35adaf43" target="_blank" rel="noopener" style="border-bottom:1px solid #A66A2C">Shining Moonlight on IMDb</a>, on why a Best Picture winner's rating collapsed the week it won</p>
+      </div>
     </div>
   </div>
 
-  <div class="entry">
-    <div class="year">2010–14</div>
-    <div>
-      <h3>Portfolio Manager</h3>
-      <p class="co">Point72 Asset Management, New York</p>
-      <p class="body">Systematic global macro in interest rates and FX. The creative work was in the data: reading it in novel ways, pulling in approaches that looked unrelated until they weren't. Ranked among the firm's top three global macro PMs by Sharpe ratio.</p>
+  <div style="background:#17181C;color:#E8E4DC;margin-top:120px">
+    <div class="r3" style="max-width:1440px;margin:0 auto;padding:92px clamp(24px,5vw,72px) 0;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
+      <p style="font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(232,228,220,0.5);margin:10px 0 0">Get in touch</p>
+      <h2 style="grid-column:span 2;font-size:clamp(36px,4.6vw,68px);font-style:italic;font-weight:400;line-height:1.03;letter-spacing:-0.028em;margin:-0.12em 0 0;max-width:26ch">Deep inside a problem? I'd like to hear about it.</h2>
     </div>
-  </div>
-
-  <div class="entry">
-    <div class="year">2006–10</div>
-    <div>
-      <h3>Portfolio Manager</h3>
-      <p class="co">Wellington Management, Boston</p>
-      <p class="body">Helped build and run Wellington's most successful systematic investment platform. Sat on the Global Macro Risk Management Committee, assessing performance, allocating capital, and finding where we were exposed.</p>
+    <div class="r3" style="max-width:1440px;margin:0 auto;padding:52px clamp(24px,5vw,72px) 92px;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
+      <div></div>
+      <p style="font-size:18px;line-height:1.6;color:rgba(232,228,220,0.68);margin:0;max-width:520px">Part or full-time for the right mission, and/or fractional alongside. Send a short note: what you're building, and where it's stuck.</p>
+      <div>
+        <a href="mailto:paul.brillinger@gmail.com" style="display:block;border-top:1px solid rgba(232,228,220,0.35);border-bottom:1px solid rgba(232,228,220,0.35);padding:15px 0">
+          <span style="display:block;font-family:Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#E8E4DC">Write to me</span>
+          <span style="display:block;font-style:italic;font-size:24px;color:#C98F4E;margin-top:6px">paul.brillinger@gmail.com</span>
+        </a>
+        <div style="display:flex;gap:26px;margin-top:20px;font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase">
+          <a href="https://www.linkedin.com/in/paul-brillinger" target="_blank" rel="noopener" style="color:rgba(232,228,220,0.6)">LinkedIn</a>
+          <a href="https://ouisi.co" target="_blank" rel="noopener" style="color:rgba(232,228,220,0.6)">OuiSi</a>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="entry">
-    <div class="year">2003–06</div>
-    <div>
-      <h3>Portfolio Manager</h3>
-      <p class="co">FairLane Asset Management, Toronto</p>
-      <p class="body">Junior partner of a startup hedge fund. Head of Risk Management and Head of Quantitative Analysis.</p>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div class="year">2001–03</div>
-    <div>
-      <h3>Bond Trader</h3>
-      <p class="co">Deutsche Bank, Toronto</p>
-      <p class="body">Junior, then senior trader. Ended up market-making the Canadian Government Bond market, 5-year to 30-year maturities, managing to a $10M/year P&amp;L. Advised the Bank of Canada on market dynamics and liquidity.</p>
-    </div>
-  </div>
-
-  <div class="entry">
-    <div class="year">Education</div>
-    <div>
-      <h3>BMath Actuarial Science · MMF Mathematical Finance</h3>
-      <p class="co">University of Waterloo (1996–2001) · University of Toronto (2002–2003)</p>
-      <p class="body">The quantitative foundation for systematic, model-driven investing, and just as much for creative problem solving. Most of the MMF ran alongside time on the trading desk at Deutsche Bank.</p>
+    <div style="border-top:1px solid rgba(232,228,220,0.16)">
+      <div style="max-width:1440px;margin:0 auto;padding:22px clamp(24px,5vw,72px);display:flex;justify-content:space-between;font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(232,228,220,0.45)">
+        <span>Paul Brillinger</span><span>New York & the Hudson Valley</span>
+      </div>
     </div>
   </div>
 </div>
-
-<div class="sec sec-rule wrap teasers">
-  <div class="tgroup">
-    <h2 class="sec-title">What I'm building.</h2>
-    <p class="tease">…<a href="https://furmath.com" target="_blank" rel="noopener">Furmath</a>, a creative and mathletic game of balancing equations</p>
-    <p class="tease">…<a href="https://playouisi.com" target="_blank" rel="noopener">OuiSi Daily and OuiSi Photologue</a>, digital versions of the physical game</p>
-    <p class="tease">…a bookshelf, made from an old piano shell</p>
-  </div>
-  <div class="tgroup">
-    <h2 class="sec-title">Things I've written.</h2>
-    <p class="tease">…<a href="https://medium.com/@paulbrillinger/shining-moonlight-on-imdb-416a35adaf43" target="_blank" rel="noopener">Shining Moonlight on IMDb</a>, on why a Best Picture winner's rating collapsed the week it won</p>
-  </div>
-  <div class="tgroup">
-    <h2 class="sec-title">Things I'm learning.</h2>
-    <p class="tease">…Brazilian jiu jitsu: a year in, rediscovering that angle and distance beat force</p>
-    <p class="tease">…about myself, through <a href="https://www.ecstaticmysticism.com/" target="_blank" rel="noopener">a program</a> on transpersonal psychology and mystical experience</p>
-  </div>
-</div>
-
-<div class="contact sec-rule wrap">
-  <h2>Deep inside a problem? I'd like to hear about it.</h2>
-  <p>Part or full-time for the right mission, and/or fractional alongside. Send a short note: what you're building, and where it's stuck.</p>
-  <a class="write" href="mailto:paul@ouisi.co">Write to me</a>
-  <div class="clinks">
-    <a class="clink" href="https://www.linkedin.com/in/paul-brillinger" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="clink" href="https://ouisi.co" target="_blank" rel="noopener">OuiSi</a>
-  </div>
-</div>
-
-<footer>Paul Brillinger · New York &amp; the Hudson Valley</footer>
-
-<script>
-const root = document.documentElement;
-let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-document.getElementById('tbtn').addEventListener('click', () => {
-  theme = theme === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', theme);
-});
-
-
-</script>
 
 </html>
