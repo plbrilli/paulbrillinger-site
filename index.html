@@ -61,6 +61,15 @@ p { text-wrap: pretty; }
   header > div { flex-wrap: wrap !important; row-gap: 12px !important; }
   header > div > span:last-child { gap: 16px !important; flex-wrap: wrap !important; }
 }
+@media (min-width: 1011px) {
+  /* the left rail only ever holds a 10px caps label, but 0.34fr gave it a third
+     of the page; that empty column ran the full height of the document */
+  .r3 { grid-template-columns: 148px minmax(0,1fr) minmax(110px,0.3fr) !important; }
+  /* the lead's left column carries two paragraphs, not a one-word label */
+  .r3.lead { grid-template-columns: 216px minmax(0,1fr) minmax(150px,0.32fr) !important; }
+  /* the diagram is a full-width graphic, not a column item */
+  .journey { grid-column: 1 / -1 !important; }
+}
 </style>
 
 <div style="background:#F7F5F1;color:#191A1F;font-family:Baskerville,'Baskerville Old Face',Georgia,'Times New Roman',serif;font-size:18px;line-height:1.62">
@@ -72,12 +81,12 @@ p { text-wrap: pretty; }
     </div>
   </header>
 
-  <div class="r3" style="max-width:1440px;margin:0 auto;padding:112px clamp(24px,5vw,72px) 0;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
+  <div class="r3" style="max-width:1440px;margin:0 auto;padding:68px clamp(24px,5vw,72px) 0;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
     <p style="font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#75726C;margin:14px 0 0;line-height:1.9">Strategy<br>New ventures<br>Product</p>
     <h1 style="grid-column:span 2;font-size:clamp(46px,6.8vw,98px);font-weight:400;font-style:italic;line-height:0.99;letter-spacing:-0.033em;margin:-0.17em 0 0">Growing companies rarely need more effort. They need a creative angle.</h1>
   </div>
 
-  <div class="r3 lead" style="max-width:1440px;margin:0 auto;padding:52px clamp(24px,5vw,72px) 88px;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
+  <div class="r3 lead" style="max-width:1440px;margin:0 auto;padding:40px clamp(24px,5vw,72px) 68px;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
     <div>
       <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:8px 0 14px">Currently</p>
       <p style="font-size:16.5px;line-height:1.55;margin:0 0 9px">Full-time for the right mission, fractional alongside.</p>
@@ -127,7 +136,7 @@ p { text-wrap: pretty; }
     </div>
   </div>
 
-  <div style="max-width:1440px;margin:104px auto 0;padding:0 clamp(24px,5vw,72px)">
+  <div style="max-width:1440px;margin:78px auto 0;padding:0 clamp(24px,5vw,72px)">
     <div style="border-top:2px solid #191A1F;padding-top:28px">
       <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);margin-bottom:52px">
         <p style="font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:8px 0 0">Where I'm useful</p>
@@ -153,7 +162,7 @@ p { text-wrap: pretty; }
     </div>
   </div>
 
-  <div style="max-width:1440px;margin:104px auto 0;padding:0 clamp(24px,5vw,72px)">
+  <div style="max-width:1440px;margin:78px auto 0;padding:0 clamp(24px,5vw,72px)">
     <div style="border-top:2px solid #191A1F;padding-top:28px">
       <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);margin-bottom:46px">
         <p style="font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:8px 0 0">My path</p>
@@ -262,7 +271,7 @@ p { text-wrap: pretty; }
     </div>
   </div>
 
-  <div style="max-width:1440px;margin:104px auto 0;padding:0 clamp(24px,5vw,72px)">
+  <div style="max-width:1440px;margin:78px auto 0;padding:0 clamp(24px,5vw,72px)">
     <div class="c3" style="border-top:2px solid #191A1F;padding-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:0">
       <div style="padding:0 48px 0 0;border-right:1px solid rgba(25,26,31,0.16)">
         <p style="font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:0 0 20px">What I'm building</p>
@@ -282,12 +291,12 @@ p { text-wrap: pretty; }
     </div>
   </div>
 
-  <div style="background:#17181C;color:#E8E4DC;margin-top:120px">
-    <div class="r3" style="max-width:1440px;margin:0 auto;padding:92px clamp(24px,5vw,72px) 0;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
+  <div style="background:#17181C;color:#E8E4DC;margin-top:84px">
+    <div class="r3" style="max-width:1440px;margin:0 auto;padding:72px clamp(24px,5vw,72px) 0;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
       <p style="font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(232,228,220,0.5);margin:10px 0 0">Get in touch</p>
       <h2 style="grid-column:span 2;font-size:clamp(36px,4.6vw,68px);font-style:italic;font-weight:400;line-height:1.03;letter-spacing:-0.028em;margin:-0.12em 0 0;max-width:26ch">Deep inside a problem? I'd like to hear about it.</h2>
     </div>
-    <div class="r3" style="max-width:1440px;margin:0 auto;padding:52px clamp(24px,5vw,72px) 92px;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
+    <div class="r3" style="max-width:1440px;margin:0 auto;padding:44px clamp(24px,5vw,72px) 72px;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
       <div></div>
       <p style="font-size:18px;line-height:1.6;color:rgba(232,228,220,0.68);margin:0;max-width:520px">Part or full-time for the right mission, and/or fractional alongside. Send a short note: what you're building, and where it's stuck.</p>
       <div>
