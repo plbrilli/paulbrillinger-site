@@ -38,6 +38,7 @@ p { text-wrap: pretty; }
   .r3 { grid-template-columns: 1fr !important; gap: 16px !important; }
   .r3 > * { grid-column: auto !important; }
   .m2 { grid-template-columns: 1fr !important; gap: 2px !important; }
+  .m2 p { text-wrap: balance; }
   .lead { display: flex !important; flex-direction: column !important; gap: 26px !important; }
   .lead > p { order: -1; }
   .c3 { grid-template-columns: 1fr !important; }
@@ -60,6 +61,12 @@ p { text-wrap: pretty; }
      it exceeds the viewport, so let it wrap instead of pushing the page wide */
   header > div { flex-wrap: wrap !important; row-gap: 12px !important; }
   header > div > span:last-child { gap: 16px !important; flex-wrap: wrap !important; }
+}
+@media (max-width: 640px) {
+  /* SVG text is in user units, so it shrinks with the viewBox. Scale it back up
+     or the labels render at ~4px on a phone. */
+  .jlbl { font-size: 30px !important; letter-spacing: 0.14em !important; }
+  .jyr  { font-size: 38px !important; }
 }
 </style>
 
@@ -131,23 +138,24 @@ p { text-wrap: pretty; }
     <div style="border-top:2px solid #191A1F;padding-top:28px">
       <div class="r3" style="display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px);margin-bottom:52px">
         <p style="font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#75726C;margin:8px 0 0">Where I'm useful</p>
-        <h2 style="grid-column:span 2;font-size:clamp(28px,3.2vw,46px);font-style:italic;font-weight:400;line-height:1.08;letter-spacing:-0.022em;margin:-0.1em 0 0">Three situations I've been inside, not adjacent to.</h2>
+        <h2 style="grid-column:span 2;font-size:clamp(28px,3.2vw,46px);font-style:italic;font-weight:400;line-height:1.08;letter-spacing:-0.022em;margin:-0.1em 0 0">Four situations I've been inside, not adjacent to.</h2>
       </div>
-      <div class="c3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0">
-        <div style="padding:0 48px 0 0;border-right:1px solid rgba(25,26,31,0.16)">
+      <div class="c3" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0">
+        <div style="padding:0 40px 0 0;border-right:1px solid rgba(25,26,31,0.16)">
           <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#75726C;margin:0 0 16px">One</p>
-          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0 0 14px">A company that has lost its why.</p>
-          <p style="font-size:16.5px;line-height:1.6;color:#75726C;margin:0">Everyone is busy and the numbers look fine, but nobody can say what it's all for. I help you put the why back into words, then make the hard choices from it.</p>
+          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0">A company that has lost its why.</p>
         </div>
-        <div style="padding:0 48px;border-right:1px solid rgba(25,26,31,0.16)">
+        <div style="padding:0 40px;border-right:1px solid rgba(25,26,31,0.16)">
           <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#75726C;margin:0 0 16px">Two</p>
-          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0 0 14px">A product that needs inventing.</p>
-          <p style="font-size:16.5px;line-height:1.6;color:#75726C;margin:0">Not a spec to write but a thing that doesn't exist yet. OuiSi began as an idea about attention and reached a quarter-million homes.</p>
+          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0">A product that needs inventing.</p>
         </div>
-        <div style="padding:0 0 0 48px">
+        <div style="padding:0 40px;border-right:1px solid rgba(25,26,31,0.16)">
           <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#75726C;margin:0 0 16px">Three</p>
-          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0 0 14px">A founder carrying too much alone.</p>
-          <p style="font-size:16.5px;line-height:1.6;color:#75726C;margin:0">I've been the last stop on every decision for eleven years. I take half of them off your desk and give back judgment, not just capacity.</p>
+          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0">A venture requiring both the prototype and the spreadsheets.</p>
+        </div>
+        <div style="padding:0 0 0 40px">
+          <p style="font-family:Helvetica,Arial,sans-serif;font-size:9.5px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#75726C;margin:0 0 16px">Four</p>
+          <p style="font-size:24px;font-style:italic;line-height:1.24;letter-spacing:-0.014em;margin:0">A founder carrying too much alone.</p>
         </div>
       </div>
     </div>
