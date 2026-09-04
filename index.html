@@ -68,6 +68,7 @@ p { text-wrap: pretty; }
   .jlbl { font-size: 30px !important; letter-spacing: 0.14em !important; }
   .jyr  { font-size: 38px !important; }
 }
+@media (max-width: 1010px) { .portrait { display: none !important; } }
 </style>
 
 <div style="background:#F7F5F1;color:#191A1F;font-family:Baskerville,'Baskerville Old Face',Georgia,'Times New Roman',serif;font-size:18px;line-height:1.62">
@@ -80,7 +81,7 @@ p { text-wrap: pretty; }
   </header>
 
   <div class="r3" style="max-width:1440px;margin:0 auto;padding:112px clamp(24px,5vw,72px) 0;display:grid;grid-template-columns:minmax(110px,0.34fr) minmax(0,1fr) minmax(110px,0.34fr);gap:clamp(22px,2.9vw,64px)">
-    <p style="font-family:Helvetica,'Helvetica Neue',Arial,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#75726C;margin:14px 0 0;line-height:1.9">Strategy<br>New ventures<br>Product</p>
+    <div class="portrait" style="margin:14px 0 0"><img src="/portrait.jpg" alt="Paul Brillinger" onerror="this.parentNode.style.display='none'" style="display:block;width:100%;aspect-ratio:1/1;object-fit:cover;filter:grayscale(1)"></div>
     <h1 style="grid-column:span 2;font-size:clamp(46px,6.8vw,98px);font-weight:400;font-style:italic;line-height:0.99;letter-spacing:-0.033em;margin:-0.17em 0 0">Growing companies rarely need more effort. They need a creative angle.</h1>
   </div>
 
