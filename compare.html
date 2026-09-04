@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Live vs v2</title>
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font:14px system-ui,-apple-system,sans-serif;background:#111;color:#eee;height:100vh;display:flex;flex-direction:column}
+  header{padding:10px 16px;display:flex;gap:18px;align-items:center;border-bottom:1px solid #333;flex:0 0 auto}
+  header b{font-weight:600}
+  button{font:inherit;background:#222;color:#eee;border:1px solid #444;border-radius:6px;padding:5px 11px;cursor:pointer}
+  button.on{background:#A66A2C;border-color:#A66A2C;color:#fff}
+  .panes{flex:1;display:flex;min-height:0}
+  .pane{flex:1;display:flex;flex-direction:column;min-width:0;border-right:1px solid #333}
+  .pane:last-child{border-right:0}
+  .lbl{padding:6px 12px;background:#1a1a1a;border-bottom:1px solid #333;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#999}
+  .wrap{flex:1;overflow:auto;display:flex;justify-content:center;background:#0a0a0a}
+  iframe{border:0;background:#fff;height:100%;width:100%}
+  .narrow iframe{width:430px;flex:0 0 430px}
+</style>
+<header>
+  <b>Live (index.html)</b> vs <b>v2 (v2.html)</b>
+  <span style="margin-left:auto"></span>
+  <button id="d" class="on">Desktop</button>
+  <button id="m">Mobile 430</button>
+</header>
+<div class="panes" id="panes">
+  <div class="pane"><div class="lbl">Live &mdash; what's deployed</div><div class="wrap"><iframe src="index.html"></iframe></div></div>
+  <div class="pane"><div class="lbl">v2 &mdash; Claude Design</div><div class="wrap"><iframe src="v2.html"></iframe></div></div>
+</div>
+<script>
+  const p=document.getElementById('panes'),d=document.getElementById('d'),m=document.getElementById('m');
+  d.onclick=()=>{p.classList.remove('narrow');d.classList.add('on');m.classList.remove('on')};
+  m.onclick=()=>{p.classList.add('narrow');m.classList.add('on');d.classList.remove('on')};
+</script>
