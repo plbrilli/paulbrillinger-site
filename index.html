@@ -42,7 +42,17 @@ p { text-wrap: pretty; }
   .lead { display: flex !important; flex-direction: column !important; gap: 26px !important; }
   .lead > p { order: -1; }
   .c3 { grid-template-columns: 1fr !important; }
-  .shots { grid-template-columns: repeat(2,1fr) !important; }
+  /* swipeable strip, bled to the screen edges so the next card peeks and the
+     gesture is discoverable without a visible scrollbar */
+  .shots {
+    display: flex !important; grid-template-columns: none !important;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    margin-left: calc(-1 * clamp(24px,5vw,72px)); margin-right: calc(-1 * clamp(24px,5vw,72px));
+    padding-left: clamp(24px,5vw,72px); padding-right: clamp(24px,5vw,72px);
+  }
+  .shots::-webkit-scrollbar { display: none; }
+  .shots > div { flex: 0 0 64%; scroll-snap-align: start; }
   .c3 > div { padding: 24px 0 !important; border-right: 0 !important; border-top: 1px solid rgba(25,26,31,0.16) !important; }
   .c3 > div:first-child { padding-top: 0 !important; border-top: 0 !important; }
 }
@@ -169,6 +179,7 @@ p { text-wrap: pretty; }
           <h3 style="font-size:23px;font-weight:600;margin:0 0 2px;letter-spacing:-0.005em">Founder & CEO</h3>
           <p style="font-size:15.5px;font-style:italic;color:#75726C;margin:0 0 14px">OuiSi Inc., Brooklyn</p>
           <p style="font-size:16.5px;line-height:1.65;color:#75726C;margin:0;max-width:600px">Disconnection, from each other and our environment, is the defining problem of our time, and OuiSi approaches it creatively: a physical-meets-digital platform that lives in homes, classrooms and memory-care centers. It continues today, restructured and leaner by design.</p>
+          <img src="/ouisi-product.jpg" alt="OuiSi photo cards laid out in a connecting chain, with the box" loading="lazy" style="display:block;width:100%;max-width:600px;height:auto;margin-top:22px;border:1px solid rgba(25,26,31,0.12)">
         </div>
         <p style="font-size:17.5px;font-style:italic;line-height:1.45;letter-spacing:-0.005em;margin:5px 0 0">Built to $15M of revenue from nothing, and into a quarter-million homes and classrooms.</p>
       </div>
@@ -250,11 +261,10 @@ p { text-wrap: pretty; }
 
   <div style="max-width:1440px;margin:104px auto 0;padding:0 clamp(24px,5vw,72px)">
     <div style="border-top:2px solid #191A1F;padding-top:28px">
-      <div class="shots" style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.4vw,22px);margin-bottom:clamp(32px,3.2vw,50px)">
+      <div class="shots" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.4vw,22px);margin-bottom:clamp(32px,3.2vw,50px)">
         <div style="background:#EFEBE3;border:1px solid rgba(25,26,31,0.12);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;padding:10px"><img src="/furmath.jpg" alt="Furmath" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
         <div style="background:#EFEBE3;border:1px solid rgba(25,26,31,0.12);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;padding:10px"><img src="/ouisidaily.jpg" alt="OuiSi Daily" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
         <div style="background:#EFEBE3;border:1px solid rgba(25,26,31,0.12);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;padding:10px"><img src="/ouisiphotologue.jpg" alt="OuiSi Photologue" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
-        <div style="background:#EFEBE3;border:1px solid rgba(25,26,31,0.12);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;padding:10px"><img src="/pianoshelf.jpg" alt="A grand piano being rebuilt as a bookshelf" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
       </div>
       <div class="c3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0">
       <div style="padding:0 48px 0 0;border-right:1px solid rgba(25,26,31,0.16)">
